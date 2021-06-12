@@ -829,37 +829,70 @@ input, a, button {
   width: 100%; }
   .gallery .sub_visual {
     background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
-
-#gallery {
-  width: 100%;
-  padding: 50px;
-  box-sizing: border-box; }
-  #gallery .inner {
+  .gallery > .inner {
     width: 1180px;
-    margin: 0 auto; }
-    #gallery .inner .list {
-      width: 100%; }
-      #gallery .inner .list::after {
-        content: "";
-        display: block;
-        clear: both; }
-      #gallery .inner .list li {
-        width: calc(100% / 3 - 30px);
-        float: left;
-        padding: 20px;
-        box-sizing: border-box;
-        background: #efefef;
-        margin: 15px;
-        text-align: center; }
-        #gallery .inner .list li a {
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box; }
+    .gallery > .inner #gallery {
+      width: 100%;
+      padding: 25px 0;
+      box-sizing: border-box; }
+      .gallery > .inner #gallery .list {
+        width: 100%; }
+        .gallery > .inner #gallery .list::after {
+          content: "";
           display: block;
-          width: 100%;
-          margin-bottom: 10px; }
-          #gallery .inner .list li a img {
-            width: 100%; }
-        #gallery .inner .list li p {
-          font: bold 16px/1.2 'arila';
-          color: #fff; }
+          clear: both; }
+        .gallery > .inner #gallery .list li {
+          width: calc(100% / 3 - 30px);
+          float: left;
+          padding: 20px;
+          box-sizing: border-box;
+          background: #efefef;
+          margin: 15px;
+          text-align: center; }
+          .gallery > .inner #gallery .list li a {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px; }
+            .gallery > .inner #gallery .list li a img {
+              width: 100%; }
+          .gallery > .inner #gallery .list li p {
+            font: bold 16px/1.2 'arila';
+            color: #fff; }
+    .gallery > .inner #search {
+      width: 100%;
+      padding: 25px 15px;
+      box-sizing: border-box; }
+      .gallery > .inner #search input[type=text] {
+        width: 90%;
+        padding: 15px 10px; }
+      .gallery > .inner #search button {
+        width: 9.5%;
+        padding: 15px 10px; }
+
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  box-sizing: border-box;
+  display: none; }
+  .pop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .pop span {
+    font: bold 14px/1 'arial';
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer; }
 
 .location {
   width: 100%; }

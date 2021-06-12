@@ -6,34 +6,61 @@
     .sub_visual{
         background: url(../img/bg-sub-visual.gif)no-repeat center/cover;
     }
-}
-
-#gallery{
-    width: 100%;
-    padding: 50px; box-sizing: border-box;
-    .inner{
+    >.inner{
         width: 1180px;
         margin: 0 auto;
-        .list{
+        padding: 50px 0; box-sizing: border-box;
+        #gallery{
             width: 100%;
-            &::after{content: ""; display: block; clear: both;}
-            li{
-                width: calc(100% / 3 - 30px);
-                float: left;
-                padding: 20px; box-sizing: border-box;
-                background: #efefef;
-                margin: 15px;
-                text-align: center;
-                a{
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 10px;
-                    img{width: 100%;}
-                }
-                p{
-                    font:bold 16px/1.2 'arila'; color: #fff;
+            padding: 25px 0; box-sizing: border-box;
+            .list{
+                width: 100%;
+                &::after{content: ""; display: block; clear: both;}
+                li{
+                    width: calc(100% / 3 - 30px);
+                    float: left;
+                    padding: 20px; box-sizing: border-box;
+                    background: #efefef;
+                    margin: 15px;
+                    text-align: center;
+                    a{
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        img{width: 100%;}
+                    }
+                    p{
+                        font:bold 16px/1.2 'arila'; color: #fff;
+                    }
                 }
             }
         }
+        #search{
+            width: 100%;
+            padding: 25px 15px; box-sizing: border-box;
+            input[type=text]{width: 90%; padding: 15px 10px;}
+            button{
+                width: 9.5%;
+                padding: 15px 10px;
+            }
+        }
+    }
+}
+
+
+.pop{
+    width: 100%; height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed; top: 0; left: 0;
+    padding: 100px; box-sizing: border-box;
+    display: none;
+    img{
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    span{
+        font:bold 14px/1 'arial'; color: #fff;
+        position: absolute; right: 20px; top: 20px;
+        cursor: pointer;
     }
 }
