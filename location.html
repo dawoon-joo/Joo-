@@ -277,17 +277,87 @@
         </div> -->
     </section>
 
-    <section id="map"></section>
-    <ul class="traffic">
-        <li><a href="#">교통정보 보기</a></li>
-        <li class="on"><a href="#">교통정보 끄기</a></li>
-    </ul>
-
-    <ul class="branch">
-        <li data-index="0" class="on"><a href="#">본점</a></li>
-        <li data-index="1"><a href="#">지점1</a></li>
-        <li data-index="2"><a href="#">지점2</a></li>
-    </ul>
+    <section id="location">
+        <div class="inner">
+            <article class="map">
+                <h3>Directions</h3>
+                <h2>지점 오시는 길</h2>
+                <ul class="traffic">
+                    <li><a href="#">교통정보 보기</a></li>
+                    <li class="on"><a href="#">교통정보 끄기</a></li>
+                </ul>
+                <ul class="branch">
+                    <li data-index="0" class="on"><a href="#">본점</a></li>
+                    <li data-index="1"><a href="#">지점1</a></li>
+                    <li data-index="2"><a href="#">지점2</a></li>
+                </ul>
+                <div id="map"></div>
+            </article>
+            <article class="transportation">
+                <h3>Public Transportation</h3>
+                <h2>대중교통</h2>
+                <div class="bus">
+                    <p>
+                        <img src="img/bus.png" alt="">
+                        버스 이용안내
+                    </p>
+                    <ul>
+                        <li>정류장</li>
+                        <li>
+                            서현역.AK플라자, 이매촌한신.서현역.AK플라자 하차
+                        </li>
+                    </ul>
+                </div>
+                <div class="subway">
+                    <p>
+                        <img src="img/bus.png" alt="">
+                        지하철 이용안내
+                    </p>
+                    <ul>
+                        <li>수인·분당선</li>
+                        <li>
+                            서현역
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="parking">
+                <h3>Parking Information</h3>
+                <h2>주차안내</h2>
+                <table>
+                    <caption>주차안내</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">OPEN</th>
+                            <th scope="col">CLOSE</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A주차장</td>
+                            <td>9:00</td>
+                            <td>22:00</td>
+                            <td>야간강좌</td>
+                        </tr>
+                        <tr>
+                            <td>B주차장</td>
+                            <td>9:00</td>
+                            <td>22:00</td>
+                            <td>19시 이후 입차 불가</td>
+                        </tr>
+                        <tr>
+                            <td>C주차장</td>
+                            <td>9:00</td>
+                            <td>22:00</td>
+                            <td>19시 이후 입차 불가</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </div>
+    </section>
 
     <footer id="sub_footer">
         <div class="inner">

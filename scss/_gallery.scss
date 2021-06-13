@@ -13,6 +13,13 @@
         #gallery{
             width: 100%;
             padding: 25px 0; box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(200px);
+            transition: 1s;
+            &.on {
+                opacity: 1;
+                transform: translateY(0px);
+            }
             .list{
                 width: 100%;
                 &::after{content: ""; display: block; clear: both;}
@@ -62,5 +69,20 @@
         font:bold 14px/1 'arial'; color: #fff;
         position: absolute; right: 20px; top: 20px;
         cursor: pointer;
+    }
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%,-50%);
+    transition: 1s;
+    opacity: 0;
+
+    &.on {
+        opacity: 1;
     }
 }
