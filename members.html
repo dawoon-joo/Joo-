@@ -268,12 +268,142 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="sub_title">
-            <div class="inner">
-                <h1>MEMBERS</h1>
-            </div>
-        </div> -->
     </section>
+
+    <section id="#members">
+            <div class="inner">
+                <form action="result.html" method="GET">
+                    <fieldset>
+                        <legend class="h">회원가입 입력양식폼</legend>
+                        <h2>Member Information</h2>
+                        <h2>기본정보</h2>
+                        <table summary="회원의 아이디,비번 입력양식폼">
+                            <caption class="h">
+                                회원정보 입력양식 테이블
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td><input type="text" id="id" name="id" placeholder="아이디를 입력해주세요">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwd1">비밀번호</label></th>
+                                    <td><input type="password" id="pwd1" name="pwd1" placeholder="비밀번호를 입력해주세요"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwd2">비밀번호재입력</label></th>
+                                    <td><input type="password" id="pwd2" name="pwd2" placeholder="비밀번호를 입력해주세요"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2>회원인증</h2>
+                        <table summary="회원의 이름,생년월일,통신사,휴대전화 번호 입력양식폼">
+                            <caption class="h">
+                                회원정보 인증 입력양식 테이블
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <th><label for="name">이름</label></th>
+                                    <td><input type="text" id="name" name="name" placeholder="ex홍길동"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="birth">생년월일</label></th>
+                                    <td><input type="text" id="birth" name="birth" placeholder="ex19940804"></td>
+                                </tr>
+                                <tr>
+                                    <th>성별</th>
+                                    <td> 
+                                        <label for="male">  <input type="radio" id="male" name="gender" value="male" > 남성 </label>
+                                        <label for="female">  <input type="radio" id="female" name="gender" value="female" > 여성 </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>통신사</th>
+                                    <td>
+                                        <label for="skt"><input type="checkbox" id="skt" name="birth" value="skt">SKT</label>
+                                        <label for="kt"><input type="checkbox" id="kt" name="birth" value="kt">KT</label>
+                                        <label for="lgu+"><input type="checkbox" id="lgu+" name="birth" value="lg+">LGU+</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="call">휴대전화</label></th>
+                                    <td>
+                                        <select name="call" id="call">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                            <option value="001">001</option>
+                                        </select>
+                                        -
+                                        <input type="text">
+                                        -
+                                        <input type="text">
+                                        <a href="#">인증번호</a>
+                                    </td>     
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2>추가정보</h2>
+                        <table summary="">
+                            <caption class="h">
+                                추가정보 입력양식 테이블
+                            </caption>
+                            <tbody>
+                                <tr>
+                                    <th><label for="company">E-mail</label></th>
+                                    <td>
+                                        <input type="text" placeholder="메일아이디를 입력해주세요 "> <span>@</span> <select name="company" id="company">
+                                            <option value="naver">naver.com</option>
+                                            <option value="nate">nate.com</option>
+                                            <option value="daum">daum.net</option>
+                                        </select> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>수신동의</th>
+                                    <td>
+                                        <label for="sms">
+                                            <input type="checkbox" id="sms" name="consent" value="sms">
+                                            SMS 수신동의
+                                        </label>
+                                        <label for="eamilconsent">
+                                            <input type="checkbox" id="eamilconsent" name="consent" value="eamilconsent">
+                                            이메일 수신동의
+                                        </label>
+                                        <span>이벤트정보,기타 다양한 정보를 빠르게 만나실 수 있습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="Address">주소</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="Address" name="Address">
+                                        <a href="#">주소 검색</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2><label for="terms">Terms & Policy</label></h2>
+                            <textarea name="terms" id="terms" cols="30" rows="10" spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum, porro doloremque quasi saepe vitae iusto reiciendis tempora voluptatibus possimus aliquid totam perspiciatis distinctio ipsam, tenetur eveniet alias magnam numquam quam nemo sed facere? Autem unde culpa, quis soluta natus nostrum! Expedita, quibusdam obcaecati dolores vero fuga voluptates fugiat voluptatibus quisquam qui atque aperiam quasi mollitia ut? Repellat, beatae sint eveniet, iste amet quasi hic cupiditate tempore nemo adipisci maxime nobis doloremque recusandae minima cum ipsam aliquam? Quisquam, quaerat corrupti aspernatur saepe dignissimos, suscipit, deleniti at ab tenetur dolorum non ex impedit veniam officiis tempore dicta expedita minima molestias vel. Magnam, qui! Voluptatibus ipsa dolor quia minima quis recusandae? Dignissimos sed est facilis numquam maiores animi quia nemo placeat quasi. Perferendis mollitia reprehenderit, dolorum itaque dolore quia vitae obcaecati ad, illo voluptas deserunt? At voluptas sapiente libero ipsam quam assumenda sunt, nemo amet qui dolorum atque dolore architecto error magni? Eligendi consequatur nam ullam. Magnam, necessitatibus distinctio laudantium nesciunt magni, optio ipsam cumque pariatur officia vitae nemo in obcaecati, inventore vel sed enim dolorum qui blanditiis cupiditate non. Mollitia ipsa voluptatum corporis porro enim sint dolorem quos eius, nihil delectus? Nemo numquam nam aliquid fugit nisi voluptas hic. Deserunt incidunt minus in optio maxime alias quas nulla, facere assumenda? Voluptatem nulla, non maiores eos similique quod ducimus adipisci dicta aperiam inventore labore magnam quidem repudiandae ea! Quidem animi expedita itaque deserunt fugit soluta non eos illo similique, sint temporibus iusto saepe perspiciatis molestias nostrum, porro natus nesciunt quas aperiam voluptatem, tenetur repellat. Tempore unde corrupti quaerat blanditiis recusandae, deleniti, laboriosam temporibus, repellendus asperiores quis dolor reprehenderit doloribus. Recusandae, commodi. Nostrum architecto eaque ipsam, saepe odit tempore fugit voluptates illum quas tempora voluptatibus blanditiis sunt velit sapiente, nisi dolores maxime at, perspiciatis ducimus quae officiis! Inventore nobis sed minima nisi odit?
+                            </textarea>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="agreecheck1">
+                                            <input type="checkbox" id="agreecheck1" name="agreecheck1" value="agreecheck1">
+                                            이용약관 및 개인정보수집 및 이용에 모두 동의합니다.
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <input type="submit" value="CONFIRM">
+                    </fieldset>
+                </form>
+            </div>
+    </section>
+
+
+
     <footer id="sub_footer">
         <div class="inner">
             <div class="wrap">

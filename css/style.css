@@ -1110,6 +1110,12 @@ input, a, button {
   .members .sub_visual {
     background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
 
+#members {
+  width: 100%; }
+  #members .inner {
+    width: 1180px;
+    margin: 0 auto; }
+
 .news {
   width: 100%; }
   .news .sub_visual {
