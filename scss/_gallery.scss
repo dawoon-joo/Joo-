@@ -6,70 +6,6 @@
     .sub_visual{
         background: url(../img/bg-sub-visual.gif)no-repeat center/cover;
     }
-    >.inner{
-        width: 1180px;
-        margin: 0 auto;
-        padding: 50px 0; box-sizing: border-box;
-        #gallery{
-            width: 100%;
-            padding: 25px 0; box-sizing: border-box;
-            opacity: 0;
-            transform: translateY(200px);
-            transition: 1s;
-            &.on {
-                opacity: 1;
-                transform: translateY(0px);
-            }
-            .list{
-                width: 100%;
-                &::after{content: ""; display: block; clear: both;}
-                li{
-                    width: calc(100% / 3 - 30px);
-                    float: left;
-                    padding: 20px; box-sizing: border-box;
-                    background: #efefef;
-                    margin: 15px;
-                    text-align: center;
-                    a{
-                        display: block;
-                        width: 100%;
-                        margin-bottom: 10px;
-                        img{width: 100%;}
-                    }
-                    p{
-                        font:bold 16px/1.2 'arila'; color: #fff;
-                    }
-                }
-            }
-        }
-        #search{
-            width: 100%;
-            padding: 25px 15px; box-sizing: border-box;
-            input[type=text]{width: 90%; padding: 15px 10px;}
-            button{
-                width: 9.5%;
-                padding: 15px 10px;
-            }
-        }
-    }
-}
-
-
-.pop{
-    width: 100%; height: 100vh;
-    background: rgba(0,0,0,0.9);
-    position: fixed; top: 0; left: 0;
-    padding: 100px; box-sizing: border-box;
-    display: none;
-    img{
-        width: 100%; height: 100%;
-        object-fit: cover;
-    }
-    span{
-        font:bold 14px/1 'arial'; color: #fff;
-        position: absolute; right: 20px; top: 20px;
-        cursor: pointer;
-    }
 }
 
 .loading {
@@ -84,5 +20,225 @@
 
     &.on {
         opacity: 1;
+    }
+}
+
+.content {
+    width: 100%;
+    padding: 100px 0px 150px;
+    box-sizing: border-box;
+    .inner {
+        width:  1180px;
+        margin: 0px auto;
+        position: relative;
+
+        >h1 {
+            font: bold 50px/1 "arial";
+            color: #333;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+
+        #search {
+            width: 100%;
+            margin-bottom: 50px;
+            input[type=text]{
+                width: 90%; padding: 15px 10px;
+                box-sizing: border-box;
+                
+            }
+            button{
+                width: 9%; padding: 15px 10px; 
+                box-sizing: border-box;
+            }
+
+        }
+        #gallery {
+            opacity: 0;
+            position: relative;
+            transform: translateY(100px);
+            transition: 1s;
+    
+            &.on {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+    
+    
+            ul {
+                width: 100%;
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+    
+                li {
+                    float: left;
+                    padding: 20px;
+                    height: 400px;
+                    box-sizing: border-box;   
+                    width: 33.333%;   
+                    
+                    &.item-sizer {
+                        width: 33.333%;
+                        opacity:0;
+                    }
+                    &:nth-of-type(8){
+                        width: 100%;
+                    }
+    
+                    
+    
+                    &:nth-of-type(8) .inner a{
+                        width: 50%;
+                        height: 100%;
+                        float: left;
+                    }
+                    &:nth-of-type(8) .inner .text_gallery {
+                        width: 50%;
+                        height: 100%;
+                        float: right;
+                        position: absolute;
+                        right: 0; top: 0;
+                    }
+                    .inner {
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        position: relative;
+                        overflow: hidden;    
+                        background: #222;     
+                        border: 1px solid #888;  
+                        &::after{
+                            display: block; clear: both; content: "";
+                        }            
+                        >a {
+                            display: block;
+                            width: 100%;
+                            height: 60%;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            opacity: 1;
+                            transition: 0.5s;
+    
+                            >img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            >p{
+                                position: absolute;
+                                top: -120px;
+                                opacity: 0;
+                                left: 20px;
+                                font: bold 14px/1 "arial";
+                                color: #fff;
+                                transition: 0.5s;
+                            }
+                            .profile {
+                                position: absolute;
+                                bottom: -120px;
+                                left: 20px;
+                                opacity: 0;
+                                transition: 0.5s 0.2s;
+                                cursor: pointer;    
+                                img {
+                                    border-radius: 50%;
+                                }
+                                span {
+                                    font: 14px/1 "arial";
+                                    color: #fff;
+                                    margin-left: 15px;
+                                    opacity: 0.7;
+                                    position: relative;
+                                    top: -18px;
+                                }
+                            }
+                        }
+                        .text_gallery{
+                            width: 100%; height: 40%;
+                            position: absolute;
+                            padding: 20px; box-sizing: border-box;
+                            left: 0; bottom: 0;
+                            background: #fff;
+                        }
+                        &:hover {
+                            >a {opacity:0.4;}
+                            p {top: 20px; opacity:1;}
+                            .profile {bottom: 20px; opacity:1;}
+                        }
+                    }
+                }
+            }
+        }
+        #sns_gallery{
+            width: 100%;
+            padding: 100px 20px; box-sizing: border-box;
+            h2{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            >ul{
+                width: 100%;
+                &::after{
+                    clear: both; content: ""; display: block;
+                }
+                >li{
+                    float: left;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    padding: 50px; box-sizing: border-box;
+                    width: 560px;
+                    height: 200px;
+                    border: 1px solid #333;
+                    &:nth-of-type(even){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }        
+    }
+}
+
+
+@media screen and (max-width: 1179px){
+    .content {   
+        padding: 100px 40px; 
+    
+        .inner {
+            width:  100%;   
+    
+            #search {
+                margin-bottom: 50px;
+            }
+    
+            #gallery {
+                ul {             
+    
+                    li {  
+                        width: 50%;  
+
+                        &.item-sizer {
+                            width: 50%;
+                        }
+                        &:nth-of-type(2) {
+                            width: 100%;
+                        }
+                        &:nth-of-type(6) {
+                            width: 100%;
+                        }
+                        &:nth-of-type(7) {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+    
+            
+        }
     }
 }

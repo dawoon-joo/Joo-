@@ -14,8 +14,14 @@
     <script defer src="js/gallery.js"></script>
     <script>
         $(document).ready(function(){
-            var vid = new Flickr();
-        })
+            $(".content .inner").myFlickr({
+                key : "3b218370762e7a7645e6e7ccbac826b2",
+                gallery : "#gallery",
+                search : "#search",
+                count : 7,
+                enableIsotope : true
+            });
+        });
     </script>
 </head>
 <body>
@@ -275,6 +281,9 @@
                 </div>
             </div>
         </div>
+    </section>
+    
+<section class="content">
         <div class="inner">
             <div id="search">
                 <input type="text">
@@ -283,9 +292,33 @@
             <div id="gallery">
                     <ul class="list"></ul>
             </div>
+            <div id="sns_gallery">
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora hic ea et delectus nobis ipsa dolorem. Suscipit voluptates autem aliquam?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora hic ea et delectus nobis ipsa dolorem. Suscipit voluptates autem aliquam?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora hic ea et delectus nobis ipsa dolorem. Suscipit voluptates autem aliquam?
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora hic ea et delectus nobis ipsa dolorem. Suscipit voluptates autem aliquam?
+                            </p>
+                        </li>
+                    </ul>
+            </div>
         </div>
-    </section>
-
+</section>
     
 
     <footer id="sub_footer">

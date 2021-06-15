@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Do+Hyeon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -830,76 +831,6 @@ input, a, button {
   width: 100%; }
   .gallery .sub_visual {
     background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
-  .gallery > .inner {
-    width: 1180px;
-    margin: 0 auto;
-    padding: 50px 0;
-    box-sizing: border-box; }
-    .gallery > .inner #gallery {
-      width: 100%;
-      padding: 25px 0;
-      box-sizing: border-box;
-      opacity: 0;
-      transform: translateY(200px);
-      transition: 1s; }
-      .gallery > .inner #gallery.on {
-        opacity: 1;
-        transform: translateY(0px); }
-      .gallery > .inner #gallery .list {
-        width: 100%; }
-        .gallery > .inner #gallery .list::after {
-          content: "";
-          display: block;
-          clear: both; }
-        .gallery > .inner #gallery .list li {
-          width: calc(100% / 3 - 30px);
-          float: left;
-          padding: 20px;
-          box-sizing: border-box;
-          background: #efefef;
-          margin: 15px;
-          text-align: center; }
-          .gallery > .inner #gallery .list li a {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px; }
-            .gallery > .inner #gallery .list li a img {
-              width: 100%; }
-          .gallery > .inner #gallery .list li p {
-            font: bold 16px/1.2 'arila';
-            color: #fff; }
-    .gallery > .inner #search {
-      width: 100%;
-      padding: 25px 15px;
-      box-sizing: border-box; }
-      .gallery > .inner #search input[type=text] {
-        width: 90%;
-        padding: 15px 10px; }
-      .gallery > .inner #search button {
-        width: 9.5%;
-        padding: 15px 10px; }
-
-.pop {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 100px;
-  box-sizing: border-box;
-  display: none; }
-  .pop img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-  .pop span {
-    font: bold 14px/1 'arial';
-    color: #fff;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer; }
 
 .loading {
   position: fixed;
@@ -913,6 +844,175 @@ input, a, button {
   .loading.on {
     opacity: 1; }
 
+.content {
+  width: 100%;
+  padding: 100px 0px 150px;
+  box-sizing: border-box; }
+  .content .inner {
+    width: 1180px;
+    margin: 0px auto;
+    position: relative; }
+    .content .inner > h1 {
+      font: bold 50px/1 "arial";
+      color: #333;
+      margin-bottom: 50px;
+      cursor: pointer; }
+    .content .inner #search {
+      width: 100%;
+      margin-bottom: 50px; }
+      .content .inner #search input[type=text] {
+        width: 90%;
+        padding: 15px 10px;
+        box-sizing: border-box; }
+      .content .inner #search button {
+        width: 9%;
+        padding: 15px 10px;
+        box-sizing: border-box; }
+    .content .inner #gallery {
+      opacity: 0;
+      position: relative;
+      transform: translateY(100px);
+      transition: 1s; }
+      .content .inner #gallery.on {
+        opacity: 1;
+        transform: translateY(0px); }
+      .content .inner #gallery ul {
+        width: 100%;
+        position: relative; }
+        .content .inner #gallery ul::after {
+          content: "";
+          display: block;
+          clear: both; }
+        .content .inner #gallery ul li {
+          float: left;
+          padding: 20px;
+          height: 400px;
+          box-sizing: border-box;
+          width: 33.333%; }
+          .content .inner #gallery ul li.item-sizer {
+            width: 33.333%;
+            opacity: 0; }
+          .content .inner #gallery ul li:nth-of-type(8) {
+            width: 100%; }
+          .content .inner #gallery ul li:nth-of-type(8) .inner a {
+            width: 50%;
+            height: 100%;
+            float: left; }
+          .content .inner #gallery ul li:nth-of-type(8) .inner .text_gallery {
+            width: 50%;
+            height: 100%;
+            float: right;
+            position: absolute;
+            right: 0;
+            top: 0; }
+          .content .inner #gallery ul li .inner {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            background: #222;
+            border: 1px solid #888; }
+            .content .inner #gallery ul li .inner::after {
+              display: block;
+              clear: both;
+              content: ""; }
+            .content .inner #gallery ul li .inner > a {
+              display: block;
+              width: 100%;
+              height: 60%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              opacity: 1;
+              transition: 0.5s; }
+              .content .inner #gallery ul li .inner > a > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; }
+              .content .inner #gallery ul li .inner > a > p {
+                position: absolute;
+                top: -120px;
+                opacity: 0;
+                left: 20px;
+                font: bold 14px/1 "arial";
+                color: #fff;
+                transition: 0.5s; }
+              .content .inner #gallery ul li .inner > a .profile {
+                position: absolute;
+                bottom: -120px;
+                left: 20px;
+                opacity: 0;
+                transition: 0.5s 0.2s;
+                cursor: pointer; }
+                .content .inner #gallery ul li .inner > a .profile img {
+                  border-radius: 50%; }
+                .content .inner #gallery ul li .inner > a .profile span {
+                  font: 14px/1 "arial";
+                  color: #fff;
+                  margin-left: 15px;
+                  opacity: 0.7;
+                  position: relative;
+                  top: -18px; }
+            .content .inner #gallery ul li .inner .text_gallery {
+              width: 100%;
+              height: 40%;
+              position: absolute;
+              padding: 20px;
+              box-sizing: border-box;
+              left: 0;
+              bottom: 0;
+              background: #fff; }
+            .content .inner #gallery ul li .inner:hover > a {
+              opacity: 0.4; }
+            .content .inner #gallery ul li .inner:hover p {
+              top: 20px;
+              opacity: 1; }
+            .content .inner #gallery ul li .inner:hover .profile {
+              bottom: 20px;
+              opacity: 1; }
+    .content .inner #sns_gallery {
+      width: 100%;
+      padding: 100px 20px;
+      box-sizing: border-box; }
+      .content .inner #sns_gallery h2 {
+        text-align: center;
+        margin-bottom: 50px; }
+      .content .inner #sns_gallery > ul {
+        width: 100%; }
+        .content .inner #sns_gallery > ul::after {
+          clear: both;
+          content: "";
+          display: block; }
+        .content .inner #sns_gallery > ul > li {
+          float: left;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          padding: 50px;
+          box-sizing: border-box;
+          width: 560px;
+          height: 200px;
+          border: 1px solid #333; }
+          .content .inner #sns_gallery > ul > li:nth-of-type(even) {
+            margin-right: 0; }
+
+@media screen and (max-width: 1179px) {
+  .content {
+    padding: 100px 40px; }
+    .content .inner {
+      width: 100%; }
+      .content .inner #search {
+        margin-bottom: 50px; }
+      .content .inner #gallery ul li {
+        width: 50%; }
+        .content .inner #gallery ul li.item-sizer {
+          width: 50%; }
+        .content .inner #gallery ul li:nth-of-type(2) {
+          width: 100%; }
+        .content .inner #gallery ul li:nth-of-type(6) {
+          width: 100%; }
+        .content .inner #gallery ul li:nth-of-type(7) {
+          width: 50%; } }
 .location {
   width: 100%; }
   .location .sub_visual {
@@ -1111,10 +1211,239 @@ input, a, button {
     background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
 
 #members {
-  width: 100%; }
+  width: 100%;
+  padding: 100px 0;
+  box-sizing: border-box; }
   #members .inner {
     width: 1180px;
     margin: 0 auto; }
+    #members .inner .step {
+      width: 100%; }
+      #members .inner .step li {
+        display: inline-block;
+        padding: 25px 10px;
+        box-sizing: border-box;
+        width: 25%;
+        height: 150px;
+        margin: 0 40px;
+        border-radius: 50px;
+        position: relative;
+        border: 1px solid #CDD6E1;
+        background: #F6F8FA; }
+        #members .inner .step li.on {
+          background: #282b3a;
+          color: #fff; }
+        #members .inner .step li .img_members {
+          border: 1px solid #CDD6E1;
+          background: #fff;
+          border-radius: 50%;
+          line-height: 100px;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          transform: translateY(-50%);
+          width: 100px;
+          height: 100px; }
+          #members .inner .step li .img_members img {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translate(-50%, -50%); }
+        #members .inner .step li .txt_members {
+          position: absolute;
+          right: 15%;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 20px 20px;
+          box-sizing: border-box; }
+          #members .inner .step li .txt_members strong {
+            font: 30px/1 'arial'; }
+        #members .inner .step li::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: -60px;
+          transform: translateY(-50%);
+          background: url(../img/btn-last-page.png) no-repeat center/cover;
+          width: 30px;
+          height: 30px; }
+        #members .inner .step li:last-of-type::before {
+          display: none; }
+    #members .inner > p {
+      text-align: center;
+      font: 25px/1.5 'Noto Sans KR';
+      color: #666;
+      margin-bottom: 100px; }
+    #members .inner > h2 {
+      display: block;
+      text-align: center;
+      font: bold 30px/1 'Nto Sans KR';
+      color: #333;
+      margin-bottom: 50px;
+      position: relative; }
+      #members .inner > h2.call_members::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -35px;
+        transform: translateX(-50%);
+        width: 25px;
+        height: 25px;
+        background: url(../img/members_call.png) no-repeat center/cover; }
+    #members .inner ul {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 100px; }
+      #members .inner ul::after {
+        content: "";
+        clear: both;
+        display: block; }
+      #members .inner ul li {
+        display: inline-block;
+        width: 40%;
+        margin: 0 15px;
+        border: 1px solid #c9c9c9;
+        padding: 30px 10px;
+        box-sizing: border-box;
+        font: 18px/1 'Nto Sans KR';
+        color: #333; }
+        #members .inner ul li > strong {
+          display: block;
+          margin-bottom: 20px; }
+        #members .inner ul li p {
+          line-height: 2; }
+    #members .inner form h2 {
+      margin-bottom: 20px; }
+      #members .inner form h2 .fa-star-of-life {
+        display: inline-block;
+        font-size: 14px;
+        color: #005FAC;
+        vertical-align: top;
+        margin-left: 10px; }
+    #members .inner form table {
+      border-top: 1px solid #333;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 50px; }
+      #members .inner form table tr {
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%; }
+        #members .inner form table tr:nth-of-type(1) {
+          padding-top: 40px; }
+        #members .inner form table tr th {
+          padding: 0 20px;
+          display: inline-block;
+          width: 20%;
+          text-align: left;
+          margin-bottom: 10px; }
+        #members .inner form table tr td {
+          padding: 0 20px;
+          display: inline-block;
+          width: 78%; }
+          #members .inner form table tr td span {
+            font: 14px/1 'Noto Sans KR';
+            color: #005FAC; }
+        #members .inner form table tr a {
+          display: inline-block;
+          width: 100px;
+          height: 40px;
+          border: 1px solid #CDD6E1;
+          background: #F6F8FA;
+          color: #333;
+          line-height: 40px;
+          border-radius: 5px;
+          margin-left: 10px;
+          text-align: center;
+          opacity: 1;
+          transition: 0.5s; }
+          #members .inner form table tr a:hover {
+            background: #282b3a;
+            color: #fff; }
+        #members .inner form table tr input {
+          border: 1px solid #CDD6E1;
+          background-color: #F6F8FA; }
+        #members .inner form table tr input[type=text] {
+          height: 40px;
+          width: 300px;
+          border-radius: 5px;
+          padding: 10px;
+          box-sizing: border-box; }
+        #members .inner form table tr input[type=password] {
+          height: 40px;
+          width: 300px;
+          border-radius: 5px;
+          padding: 10px;
+          box-sizing: border-box; }
+        #members .inner form table tr input[type=checkbox] {
+          margin-right: 10px; }
+        #members .inner form table tr.user_male label {
+          margin-right: 40px; }
+        #members .inner form table tr.Agency label {
+          margin-right: 40px; }
+        #members .inner form table tr.user_call input {
+          width: 100px; }
+        #members .inner form table tr #call {
+          height: 40px;
+          width: 60px;
+          padding: 5px;
+          box-sizing: border-box;
+          border-radius: 5px; }
+        #members .inner form table tr.user_agree1 label {
+          margin-right: 40px; }
+        #members .inner form table tr #company {
+          height: 40px;
+          width: 200px;
+          padding: 5px;
+          box-sizing: border-box;
+          border-radius: 5px; }
+    #members .inner form .box_table4 {
+      border: none;
+      height: 200px;
+      text-align: center; }
+      #members .inner form .box_table4 tr {
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%; }
+        #members .inner form .box_table4 tr th {
+          padding: 0 20px;
+          display: inline-block;
+          width: 100%;
+          text-align-last: center;
+          margin-bottom: 10px; }
+        #members .inner form .box_table4 tr #agreecheck1 {
+          text-align: center; }
+      #members .inner form .box_table4.user_agree2 label {
+        font: 14px/1 'Nto Sans KR';
+        width: 100%; }
+      #members .inner form .box_table4 input[type=checkbox] {
+        margin-right: 5px; }
+      #members .inner form .box_table4 input[type=submit] {
+        width: 200px;
+        height: 50px;
+        transition: 0.5s; }
+        #members .inner form .box_table4 input[type=submit]:hover {
+          background: #282b3a;
+          color: #fff; }
+    #members .inner form .txtarea {
+      width: 100%;
+      margin-bottom: 50px; }
+      #members .inner form .txtarea h2 {
+        text-align: center;
+        font: bold 30px/1 'Nto Sans KR';
+        color: #333;
+        margin-bottom: 50px; }
+      #members .inner form .txtarea #terms {
+        width: 100%;
+        height: 300px;
+        padding: 10px 40px;
+        box-sizing: border-box;
+        font: 14px/2 'Nto Sans KR';
+        color: #666; }
 
 .news {
   width: 100%; }

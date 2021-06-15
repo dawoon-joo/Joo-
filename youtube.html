@@ -12,8 +12,11 @@
     <script defer src="js/sub_layout.js"></script>
     <script defer src="js/youtube.js"></script>
     <script>
-        $(document).ready(function(){
-            var vid = new Youtube();
+       $(document).ready(function(){
+        $("#vidGallery .inner").myYoutube({
+                key : "AIzaSyAbsihuuotg-DuSq6se3m8uKEz4j-B5Pg8",
+                playList : "PLWKqsm200CTmqRv0pQcxtq1snU1_i2inu",
+            });  
         })
     </script>
 </head>

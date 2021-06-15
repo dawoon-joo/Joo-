@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+//font-family: 'Noto Sans KR', sans-serif;
+//#005FAC;
 .members{
     width: 100%;
     .sub_visual{
@@ -9,8 +11,255 @@
 
 #members{
     width: 100%;
+    padding: 100px 0; box-sizing: border-box;
     .inner{
         width: 1180px;
         margin: 0 auto;
-    }
+        .step{
+            width: 100%;
+            li{
+                display: inline-block;
+                padding: 25px 10px; box-sizing: border-box;
+                width:25%; height: 150px;
+                margin:0 40px;
+                border-radius: 50px;
+                position: relative;
+                border: 1px solid #CDD6E1;
+                background: #F6F8FA;
+                &.on{
+                    background: #282b3a;
+                    color: #fff;
+                }
+                .img_members{
+                    border: 1px solid #CDD6E1;
+                    background: #fff;
+                    border-radius: 50%;
+                    line-height: 100px;
+                    position: absolute;
+                    top: 50%; left: 10%;
+                    transform: translateY(-50%);
+                    width: 100px; height: 100px;
+                    img{
+                        position: absolute;
+                        top: 50%; left: 50px;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .txt_members{
+                    position: absolute;
+                    right: 15%; top: 50%;
+                    transform: translateY(-50%);
+                    padding:20px 20px; box-sizing: border-box;
+                    strong{
+                        font: 30px/1 'arial';
+                    }
+                    p{
+                    }
+                }
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%; right: -60px;
+                    transform: translateY(-50%);
+                    background: url(../img/btn-last-page.png)no-repeat center/cover;
+                    width: 30px; height: 30px;
+                }
+                &:last-of-type::before{
+                    display: none;
+                }
+            }
+        }
+        >p{
+            text-align: center;
+            font:25px/1.5 'Noto Sans KR'; color: #666;
+            margin-bottom: 100px;
+        }
+        >h2{
+            display: block;
+            text-align: center;
+            font:bold 30px/1 'Nto Sans KR'; color: #333;
+            margin-bottom: 50px;
+            position: relative;
+            &.call_members::before{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 50%; top: -35px;
+                transform: translateX(-50%);
+                width: 25px; height: 25px;
+                background: url(../img/members_call.png)no-repeat center/cover;
+            }
+        }
+        ul{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 100px;
+            &::after{
+                content: ""; clear: both; display: block;
+            }
+            li{
+                display: inline-block;
+                width: 40%;
+                margin: 0 15px;
+                border: 1px solid #c9c9c9;
+                padding: 30px 10px; box-sizing: border-box;
+                font:18px/1 'Nto Sans KR'; color: #333;
+                >strong{
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                p{
+                    line-height: 2;
+                }
+            }
+        }
+        form{
+            h2{
+                margin-bottom: 20px;
+                .fa-star-of-life{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #005FAC;
+                    vertical-align: top;
+                    margin-left: 10px;
+                    
+                }
+            }
+            table{
+                border-top: 1px solid #333;
+                width: 100%; height: 200px;
+                margin-bottom: 50px;
+                tr{
+                    display: block;
+                    padding:20px; box-sizing: border-box;
+                    width: 100%;
+                    &:nth-of-type(1){
+                        padding-top:40px ;
+                    }
+                        th{
+                            padding:0 20px;
+                            display: inline-block;
+                            width: 20%;
+                            text-align: left;
+                            margin-bottom: 10px;
+                        }
+                        td{
+                            padding:0 20px;
+                            display: inline-block;
+                            width: 78%;
+                            span{
+                                font:14px/1 'Noto Sans KR';
+                                color: #005FAC;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            width: 100px; height: 40px;
+                            border: 1px solid #CDD6E1;
+                            background: #F6F8FA;
+                            color: #333;
+                            line-height: 40px;
+                            border-radius: 5px;
+                            margin-left: 10px;
+                            text-align: center;
+                            opacity: 1;
+                            transition: 0.5s;
+                            &:hover{
+                                background: #282b3a;
+                                color: #fff;
+                            }
+                        }
+                        input{
+                            border: 1px solid #CDD6E1;
+                            background-color: #F6F8FA;
+                        }
+                        input[type=text]{
+                            height: 40px; width: 300px;
+                            border-radius: 5px;
+                            padding: 10px; box-sizing: border-box;
+                        }
+                        input[type=password]{
+                            height: 40px; width: 300px;
+                            border-radius: 5px;
+                            padding: 10px; box-sizing: border-box;
+                        }
+                        input[type=checkbox]{
+                            margin-right: 10px;
+                        }
+                    &.user_male label{
+                        margin-right: 40px;
+                    }    
+                    &.Agency label{
+                        margin-right: 40px;
+                    }
+                    &.user_call input{
+                        width: 100px;
+                    }
+                        #call{
+                            height: 40px; width: 60px;
+                            padding: 5px; box-sizing: border-box;
+                            border-radius: 5px;
+                        }
+                    &.user_agree1 label{
+                        margin-right: 40px;
+                    }
+                        #company{
+                            height: 40px; width: 200px;
+                            padding: 5px; box-sizing: border-box;
+                            border-radius: 5px;
+                        }     
+                }
+            }
+            .box_table4{
+                border: none;
+                height: 200px;
+                text-align: center;
+                tr{
+                    display: block;
+                    padding:20px; box-sizing: border-box;
+                    width: 100%;
+                    th{
+                        padding:0 20px;
+                        display: inline-block;
+                        width: 100%;
+                        text-align-last: center;
+                        margin-bottom: 10px;
+                    }
+                    #agreecheck1{
+                        text-align: center;
+                    }
+                }
+                &.user_agree2 label{
+                    font:14px/1 'Nto Sans KR';
+                    width: 100%;
+                }
+                    input[type=checkbox]{
+                        margin-right: 5px;
+                    }
+                    input[type=submit]{
+                        width: 200px; height: 50px;
+                        transition: 0.5s;
+                        &:hover{
+                            background: #282b3a;
+                            color: #fff;
+                        }
+                    }
+            }
+            .txtarea{
+                    width: 100%;
+                    margin-bottom: 50px;
+                    h2{
+                        text-align: center;
+                        font:bold 30px/1 'Nto Sans KR'; color: #333;
+                        margin-bottom: 50px;
+                    }
+                    #terms{
+                        width: 100%; height: 300px;
+                        padding: 10px 40px; box-sizing: border-box;
+                        font:14px/2 'Nto Sans KR'; color: #666;
+                    }
+            }
+        }
+    }        
 }

@@ -1,160 +1,283 @@
 //46caa83347cecb3bd94f4d1ccbbb627e
 
-$("body").prepend(
-    $("<img class='on loading'>").attr("src", "img/loading.gif")
-)
+(function($){
+    $.defaults = {
+        key : undefined,
+        gallery : "#gallery",
+        search : "#search",
+        count : 7,
+        enableIsotpe : true
+    }
 
-function Flickr(){
-    this.init();
-    this.bindingEvent();
-}
+    $.fn.myFlickr = function(opt){
+        opt = $.extend({}, $.defaults, opt);
+        if(opt.key == undefined) {
+            console.error("key는 필수 입력 사항입니다.");
+        }
+        new Flickr(this, opt);
+        return this;
+    }
 
-Flickr.prototype.init = function(){
-    this.url = "https://www.flickr.com/services/rest/?method=flickr.interestingness.getList";
-    this.key = "46caa83347cecb3bd94f4d1ccbbb627e"
-    this.url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
-    this.searchBtn = $("#search button");
-    this.searchInput = $("#search input");
-    this.targetEl = "#gallery ul";
-    this.num = 7;
-}
+    function Flickr(el, opt){
+        this.init(el, opt);
+        this.bindingEvent();
+    }
 
-Flickr.prototype.bindingEvent = function(){
-    this.getFlickr(this.url, this.key, this.num);
+    Flickr.prototype.init = function(el, opt){     
+        this.url = "https://www.flickr.com/services/rest/?method=flickr.interestingness.getList";
+        this.url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
+        this.url_user = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos";
+        this.key = opt.key;
+        this.count = opt.count;
+        this.frame = el;
+        this.gallery = el.find(opt.gallery); //$("#wrap").find("#gallery")
+        this.search = el.find(opt.search);   
+        this.enableIso = opt.enableIsotope;
+    }
 
-    $("body").on("click", ".list li a",function(e){
-        e.preventDefault();
-        var imgSrc = $(this).attr("href");
-        createPop(imgSrc);
-    }.bind(this))
-    
-    $("body").on("click",".pop span",function(e){
-        e.preventDefault();
-        $(this).parent().fadeOut(500,function(){
-            $(this).remove();
+    Flickr.prototype.bindingEvent = function(){
+        $("body").prepend(
+            $("<img class='on loading'>").attr("src", "img/loading.gif")
+        )
+
+        //처음 로딩시 type을 interest로 지정해서 getList함수 호출      
+        this.getList({
+            type: "interest"
+        });  
+
+        //타이틀 클릭시 다시 초기화면 보이기
+        var tit = this.frame.find("h1");
+        tit.on("click", function(){
+            this.gallery.removeClass("on");
+            $(".loading").addClass("on");
+
+            this.getList({
+                type: "interest"
+            })
         }.bind(this));
-    });
-    
-    this.searchBtn.on("click",function(e){
-        e.preventDefault();
-        this.search();
-    }.bind(this))
-    
-    $(window).on("keypress", function(e){
-        if(e.keyCode === 13){
-            this.search();
-        }
-    }.bind(this))
-}
+       
+        var btn = $(this.search.selector).children("button");
+        btn.on("click", function(e){
+            e.preventDefault();
+            this.searchTag();
+        }.bind(this));
 
+        $(window).on("keypress", function(e){
+            if(e.keyCode == 13 ) this.searchTag();
+        }.bind(this));
 
-Flickr.prototype.getFlickr = function(url, key, num, tags){
-    $.ajax({
-        url:url,
-        dataType:"json",
-        data : {
-            api_key :key,
-            per_page: num,
-            format:"json",
-            nojsoncallback:1,
-            tags: tags
-        }
-    })
-    .success(function(data){
-        var item = data.photos.photo;
-        this.createList(item);
-    }.bind(this))
-    .error(function(err){
-        console.lor("데이터를 불러오는데 실패했습니다.")
-    })
-}
+        var btnGallery = this.gallery.find("li a").selector;
+        $("body").on("click", btnGallery, function(e){
+            e.preventDefault();
 
+            var imgSrc = $(e.currentTarget).attr("href");
+            this.createPop(imgSrc);
+        }.bind(this));
 
-Flickr.prototype.createList = function(data){
-    var $targetEl = $(this.targetEl.selector);
-    $targetEl.empty();
+        $("body").on("click", ".pop span", function(){
+            $(".pop").fadeOut(500,function(){
+                $(".pop").remove();
+            })
+        });
         
-    $(data).each(function(index, data){
-        var text = data.title;
-        if(!data.title) text = "default text";
+        //사용자 아이디 클릭시 사용자 갤러리 이미지 출력
+        var gallery_btn = this.gallery.find("li .profile").selector;
+        $("body").on("click", gallery_btn, function(e){
+            var userId = $(e.currentTarget).find("span").text();
 
-        $("#gallery .list")
-            .append(
-                $("<li>")
+            this.gallery.removeClass("on");
+            $(".loading").addClass("on");
+
+            this.getList({
+                type: "user",
+                user: userId
+            });
+        }.bind(this));
+    }
+
+    Flickr.prototype.getList = function(opt){
+        //type에 따라 ajax호출구문 변경
+        var result_opt;
+
+        //타입이 interest일떄 ajax전용 옵션을 result_opt에 저장
+        if(opt.type == "interest"){
+            result_opt = {
+                url: this.url,
+                dataType: "json",
+                data: {
+                    api_key: this.key,
+                    per_page: this.count,
+                    format: "json",
+                    nojsoncallback: 1,
+                    tagmode: "any",
+                    privacy_filter: 5
+                }
+            }
+        }
+
+        //타입이 search일떄 ajax전용 옵션을 result_opt에 저장
+        if(opt.type == "search"){
+            result_opt = {
+                url: this.url_search,
+                dataType: "json",
+                data: {
+                    api_key: this.key,
+                    per_page: this.count,
+                    format: "json",
+                    nojsoncallback: 1,
+                    tagmode: "any",
+                    privacy_filter: 5,
+                    tags: opt.tag
+                }
+            }
+        }
+
+        //타입이 user일떄 ajax전용 옵션을 result_opt에 저장
+        if(opt.type == "user"){
+            result_opt = {
+                url: this.url_user,
+                dataType: "json",
+                data: {
+                    api_key: this.key,
+                    per_page: this.count,
+                    format: "json",
+                    nojsoncallback: 1,
+                    tagmode: "any",
+                    privacy_filter: 5,
+                    user_id: opt.user
+                }
+            }
+        }
+    
+        
+        //ajax메서드 호출시 외부의 result_opt객체값 인수로 전달
+        $.ajax(result_opt)
+        .success(function(data){   
+            var item = data.photos.photo;  
+            this.createList(item);
+        }.bind(this))
+        .error(function(err){
+            console.error(err);
+        })
+    }
+
+    Flickr.prototype.createList = function(data){    
+        var $gallery = $(this.gallery.selector);     
+     
+        $gallery.empty();
+        $gallery.append("<ul>");
+
+        //무조건 첫번쨰 li를 item-sizer클래스 지정해서 동적 생성
+        $gallery.children("ul").append("<li class='item-sizer'>");
+        
+        $(data).each(function(index, data){
+            var text = data.title;    
+            console.log(data);                   
+            if(!data.title) text = "No description in this photo.";
+
+            $gallery.children("ul").append(
+                $("<li class='item'>").append(
+                    $("<div class='inner'>")
                     .append(
-                        $("<a>")
-                            .attr({
-                                href:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                            })
-                            .append(
-                                $("<img>")
-                                .attr({
-                                    src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_m.jpg",
-                                    onerror:"javascript:this.parentNode.parentNode:style='display:none;'"
-                                })
-                            ),
-                            $("<p>").text(text)
+                        $("<a>").attr({
+                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                        }).append(
+                            $("<img>").attr({
+                                src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_w.jpg",
+                                onerror : "javascript:this.parentNode.parentNode.parentNode.style='display:none;'"
+                            }),
+                            $("<p>").text(text),
+                            $("<div class='profile'>")
+                                .append(
+                                    $("<img>").attr({src: "https://www.flickr.com/buddyicons/"+data.owner+".jpg"}),
+                                    $("<span>").text(data.owner)
+                                ) 
+                        )                        
+                    )                    
+                    .append(
+                        $("<div class='text_gallery'>")
+                        .append(
+                            $("<h3>").text("lorem lorem lorem"),
+                            $("<p>").text("lorem lorem"),
+                            
+                        )
                     )
+                    
+                )
             )
-            
-    })
-    this.isoLayout();
-}
+        }.bind(this));       
+        
+        //리스트 생성 완료시 isotope레이아웃 적용
+        if(this.enableIso){
+            this.isoLayout();
+        }else{
+            this.gallery.addClass("on");                   
+            $(".loading").removeClass("on");
+        }
+    }
 
+    Flickr.prototype.isoLayout = function(){  
+        var $gallery = $(this.gallery.selector);   
+        var frame = $gallery.find("ul").selector; 
+        var imgs = $gallery.find("img");  
+        var imgNum = 0;  
+        
+    
+        $(imgs).each(function(index, data){          
+            data.onload = function(){         
+                imgNum++;
+   
+                if(imgNum === imgs.length) {                 
+                    new Isotope( frame, {
+                        itemSelector : ".item",
+                        percentPosition: true,
+                        transitionDuration: "0.8s",
+                        masonry : {
+                            columnWidth: ".item-sizer"
+                        }                      
+                    });
+                    
+                    $gallery.addClass("on");                   
+                    $(".loading").removeClass("on");
+                }
+            }  
+        }.bind(this));
+    }
 
-Flickr.prototype.isoLayout = function(){
- //DOM생성 이후 img돔 요소만 찾아서 유사배열로 저장
- var imgs = $(this.targetEl).find("img");
- var count = 0;
+    Flickr.prototype.searchTag = function(){
+        var inputs = $(this.search.selector).children("input").val();
+        if(inputs == "") {
+            alert("검색어를 입력해주세요.");
+            return;
+        }
 
-  //모든 imgDOM을 반복을 돌림    
- $(imgs).each(function(index, data){
+        this.gallery.removeClass("on");
+        $(".loading").addClass("on");
 
-      //해당 DOM의 소스이미지가 완료가 되면 실행되는 onload이벤트 실행
-     data.onload = function(){
-          //각 소스이미지가 로딩완료되면 카운트값이 1씩 증가
-         count++;
+        this.getList({
+            type: "search",
+            tag: inputs
+        });
+        $(this.search.selector).children("input").val("");
+    }
 
-          //카운트 값이 전체 이미지갯수와 동일해지면
-          //(모든 소스이미지가 로딩이 완료되면)
-          //그때 isoLayout함수 호출
-         if(count == this.num){
-             new Isotope(targetEl, {
-                 itemSelector : "#gallery ul li",
-                 columnWidth: "#gallery ul li",
-                 transitionDuration: "0.5s"
-             });
-             $("#gallery").addClass("on");
-             $(".loading").removeClass("on");
-         }
-     }
- });
-}
+    Flickr.prototype.createPop = function(imgSrc){
+        $("body").append(
+            $("<aside class='pop'>")
+                .css({
+                    width: '100%', height: "100%", position: "fixed", top: 0, left: 0, zIndex: 10,
+                    boxSizing: "border-box", padding: "3vw", background: "rgba(0,0,0,0.9)", display: "none"
+                })
+                .append(
+                    $("<img>").attr("src", imgSrc).css({
+                        width: "100%", height:"100%", objectFit: "contain"
+                    }),
+                    $("<span>").text("close").css({
+                        cursor:"pointer", color:"#fff", position: "absolute", top: 20, right: 20
+                    })
+                ).fadeIn()
+        )
+    }
+   
 
-
-Flickr.prototype.search = function(){
-    var tags = searchInput.val();
-    if(tags == ""){
-        alert("검색어를 입력하세요.");
-        return;
-    } 
-    $("#gallery").removeClass("on");
-    $(".loading").addClass("on");
-    this.getFlickr(this.url_search, this.key, this.num, this.tags);
-}
-
-Flickr.prototype.createPop = function(imgSrc){
-    $("body").append(
-        $("<aside class='pop'>")
-            .append(
-                $("<img>")
-                .attr({src:imgSrc})
-            )
-            .append(
-                $("<span>")
-                .text("close")
-            )
-    )
-    $(".pop").fadeIn();
-}
-
+})(jQuery);

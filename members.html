@@ -270,63 +270,110 @@
         </div>
     </section>
 
-    <section id="#members">
+    <section id="members">
             <div class="inner">
+                <ul class="step">
+                    <li class="on">
+                        <div class="img_members">
+                            <img src="img/bus.png" alt="">
+                        </div>
+                        <div class="txt_members">
+                            <strong>step1</strong>
+                            <p>Lorem.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_members">
+                            <img src="img/bus.png" alt="">
+                        </div>
+                        <div class="txt_members">
+                            <strong>step2</strong>
+                            <p>Lorem.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img_members">
+                            <img src="img/bus.png" alt="">
+                        </div>
+                        <div class="txt_members">
+                            <strong>step3</strong>
+                            <p>Lorem.</p>
+                        </div>
+                    </li>
+                </ul>
+                <h2 class="call_members">Lorem, ipsum.</h2>
+                <ul>
+                    <li>
+                        <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                        <p>
+                            010-8888-8888
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                        <p>
+                            010-8888-8888
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </li>
+                </ul>
                 <form action="result.html" method="GET">
                     <fieldset>
                         <legend class="h">회원가입 입력양식폼</legend>
-                        <h2>Member Information</h2>
-                        <h2>기본정보</h2>
-                        <table summary="회원의 아이디,비번 입력양식폼">
+                        <h2>기본정보<i class="fas fa-star-of-life"></i></h2>
+                        <table summary="회원의 아이디,비번 입력양식폼" class="box_table1">
                             <caption class="h">
                                 회원정보 입력양식 테이블
                             </caption>
                             <tbody>
-                                <tr>
+                                <tr class="user_id">
                                     <th><label for="id">아이디</label></th>
                                     <td><input type="text" id="id" name="id" placeholder="아이디를 입력해주세요">
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="user_pwd1">
                                     <th><label for="pwd1">비밀번호</label></th>
                                     <td><input type="password" id="pwd1" name="pwd1" placeholder="비밀번호를 입력해주세요"></td>
                                 </tr>
-                                <tr>
+                                <tr class="user_pwd2">
                                     <th><label for="pwd2">비밀번호재입력</label></th>
                                     <td><input type="password" id="pwd2" name="pwd2" placeholder="비밀번호를 입력해주세요"></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <h2>회원인증</h2>
-                        <table summary="회원의 이름,생년월일,통신사,휴대전화 번호 입력양식폼">
+                        <h2>회원인증<i class="fas fa-star-of-life"></i></h2>
+                        <table summary="회원의 이름,생년월일,통신사,휴대전화 번호 입력양식폼" class="box_table2">
                             <caption class="h">
                                 회원정보 인증 입력양식 테이블
                             </caption>
                             <tbody>
-                                <tr>
+                                <tr class="user_name">
                                     <th><label for="name">이름</label></th>
                                     <td><input type="text" id="name" name="name" placeholder="ex홍길동"></td>
                                 </tr>
-                                <tr>
+                                <tr class="user_birth">
                                     <th><label for="birth">생년월일</label></th>
                                     <td><input type="text" id="birth" name="birth" placeholder="ex19940804"></td>
                                 </tr>
-                                <tr>
+                                <tr class="user_male">
                                     <th>성별</th>
                                     <td> 
                                         <label for="male">  <input type="radio" id="male" name="gender" value="male" > 남성 </label>
                                         <label for="female">  <input type="radio" id="female" name="gender" value="female" > 여성 </label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="Agency">
                                     <th>통신사</th>
                                     <td>
-                                        <label for="skt"><input type="checkbox" id="skt" name="birth" value="skt">SKT</label>
-                                        <label for="kt"><input type="checkbox" id="kt" name="birth" value="kt">KT</label>
-                                        <label for="lgu+"><input type="checkbox" id="lgu+" name="birth" value="lg+">LGU+</label>
+                                        <label for="skt"><input type="checkbox" id="skt" name="Agency" value="skt">SKT</label>
+                                        <label for="kt"><input type="checkbox" id="kt" name="Agency" value="kt">KT</label>
+                                        <label for="lgu+"><input type="checkbox" id="lgu+" name="Agency" value="lg+">LGU+</label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="user_call">
                                     <th><label for="call">휴대전화</label></th>
                                     <td>
                                         <select name="call" id="call">
@@ -343,13 +390,13 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <h2>추가정보</h2>
-                        <table summary="">
+                        <h2>추가정보<i class="fas fa-star-of-life"></i></h2>
+                        <table summary="" class="box_table3">
                             <caption class="h">
                                 추가정보 입력양식 테이블
                             </caption>
                             <tbody>
-                                <tr>
+                                <tr class="user_company">
                                     <th><label for="company">E-mail</label></th>
                                     <td>
                                         <input type="text" placeholder="메일아이디를 입력해주세요 "> <span>@</span> <select name="company" id="company">
@@ -359,7 +406,7 @@
                                         </select> 
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="user_agree1">
                                     <th>수신동의</th>
                                     <td>
                                         <label for="sms">
@@ -373,7 +420,7 @@
                                         <span>이벤트정보,기타 다양한 정보를 빠르게 만나실 수 있습니다.</span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="user_address">
                                     <th><label for="Address">주소</label>
                                     </th>
                                     <td>
@@ -383,20 +430,26 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <h2><label for="terms">Terms & Policy</label></h2>
-                            <textarea name="terms" id="terms" cols="30" rows="10" spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum, porro doloremque quasi saepe vitae iusto reiciendis tempora voluptatibus possimus aliquid totam perspiciatis distinctio ipsam, tenetur eveniet alias magnam numquam quam nemo sed facere? Autem unde culpa, quis soluta natus nostrum! Expedita, quibusdam obcaecati dolores vero fuga voluptates fugiat voluptatibus quisquam qui atque aperiam quasi mollitia ut? Repellat, beatae sint eveniet, iste amet quasi hic cupiditate tempore nemo adipisci maxime nobis doloremque recusandae minima cum ipsam aliquam? Quisquam, quaerat corrupti aspernatur saepe dignissimos, suscipit, deleniti at ab tenetur dolorum non ex impedit veniam officiis tempore dicta expedita minima molestias vel. Magnam, qui! Voluptatibus ipsa dolor quia minima quis recusandae? Dignissimos sed est facilis numquam maiores animi quia nemo placeat quasi. Perferendis mollitia reprehenderit, dolorum itaque dolore quia vitae obcaecati ad, illo voluptas deserunt? At voluptas sapiente libero ipsam quam assumenda sunt, nemo amet qui dolorum atque dolore architecto error magni? Eligendi consequatur nam ullam. Magnam, necessitatibus distinctio laudantium nesciunt magni, optio ipsam cumque pariatur officia vitae nemo in obcaecati, inventore vel sed enim dolorum qui blanditiis cupiditate non. Mollitia ipsa voluptatum corporis porro enim sint dolorem quos eius, nihil delectus? Nemo numquam nam aliquid fugit nisi voluptas hic. Deserunt incidunt minus in optio maxime alias quas nulla, facere assumenda? Voluptatem nulla, non maiores eos similique quod ducimus adipisci dicta aperiam inventore labore magnam quidem repudiandae ea! Quidem animi expedita itaque deserunt fugit soluta non eos illo similique, sint temporibus iusto saepe perspiciatis molestias nostrum, porro natus nesciunt quas aperiam voluptatem, tenetur repellat. Tempore unde corrupti quaerat blanditiis recusandae, deleniti, laboriosam temporibus, repellendus asperiores quis dolor reprehenderit doloribus. Recusandae, commodi. Nostrum architecto eaque ipsam, saepe odit tempore fugit voluptates illum quas tempora voluptatibus blanditiis sunt velit sapiente, nisi dolores maxime at, perspiciatis ducimus quae officiis! Inventore nobis sed minima nisi odit?
-                            </textarea>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <label for="agreecheck1">
-                                            <input type="checkbox" id="agreecheck1" name="agreecheck1" value="agreecheck1">
+                        <div class="txtarea">
+                            <h2><label for="terms">Terms & Policy</label></h2>
+                                <textarea name="terms" id="terms" cols="30" rows="10" spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum, porro doloremque quasi saepe vitae iusto reiciendis tempora voluptatibus possimus aliquid totam perspiciatis distinctio ipsam, tenetur eveniet alias magnam numquam quam nemo sed facere? Autem unde culpa, quis soluta natus nostrum! Expedita, quibusdam obcaecati dolores vero fuga voluptates fugiat voluptatibus quisquam qui atque aperiam quasi mollitia ut? Repellat, beatae sint eveniet, iste amet quasi hic cupiditate tempore nemo adipisci maxime nobis doloremque recusandae minima cum ipsam aliquam? Quisquam, quaerat corrupti aspernatur saepe dignissimos, suscipit, deleniti at ab tenetur dolorum non ex impedit veniam officiis tempore dicta expedita minima molestias vel. Magnam, qui! Voluptatibus ipsa dolor quia minima quis recusandae? Dignissimos sed est facilis numquam maiores animi quia nemo placeat quasi. Perferendis mollitia reprehenderit, dolorum itaque dolore quia vitae obcaecati ad, illo voluptas deserunt? At voluptas sapiente libero ipsam quam assumenda sunt, nemo amet qui dolorum atque dolore architecto error magni? Eligendi consequatur nam ullam. Magnam, necessitatibus distinctio laudantium nesciunt magni, optio ipsam cumque pariatur officia vitae nemo in obcaecati, inventore vel sed enim dolorum qui blanditiis cupiditate non. Mollitia ipsa voluptatum corporis porro enim sint dolorem quos eius, nihil delectus? Nemo numquam nam aliquid fugit nisi voluptas hic. Deserunt incidunt minus in optio maxime alias quas nulla, facere assumenda? Voluptatem nulla, non maiores eos similique quod ducimus adipisci dicta aperiam inventore labore magnam quidem repudiandae ea! Quidem animi expedita itaque deserunt fugit soluta non eos illo similique, sint temporibus iusto saepe perspiciatis molestias nostrum, porro natus nesciunt quas aperiam voluptatem, tenetur repellat. Tempore unde corrupti quaerat blanditiis recusandae, deleniti, laboriosam temporibus, repellendus asperiores quis dolor reprehenderit doloribus. Recusandae, commodi. Nostrum architecto eaque ipsam, saepe odit tempore fugit voluptates illum quas tempora voluptatibus blanditiis sunt velit sapiente, nisi dolores maxime at, perspiciatis ducimus quae officiis! Inventore nobis sed minima nisi odit?
+                                </textarea>
+                        </div>
+                        <table class="box_table4">
+                            <tr class="user_agree2">
+                                <th>
+                                    <label for="agreecheck1">
+                                        <input type="checkbox" id="agreecheck1" name="agreecheck1" value="agreecheck1">
                                             이용약관 및 개인정보수집 및 이용에 모두 동의합니다.
-                                        </label>
-                                    </td>
-                                </tr>
-                            </table>
-                            <input type="submit" value="CONFIRM">
+                                    </label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input type="submit" value="CONFIRM">
+                                </th>
+                            </tr>
+                        </table>
                     </fieldset>
                 </form>
             </div>
