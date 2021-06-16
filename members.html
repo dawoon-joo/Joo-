@@ -10,6 +10,16 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script defer src="js/sub_layout.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myForm").myValidation({
+                isTxt: ["id","email1","name","birth"] ,
+                isCheck: ["gender"],
+                isSelect: ["email2"],
+                isPwd: ["pwd1","pwd2"]
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="sub_header">
@@ -320,7 +330,7 @@
                         </p>
                     </li>
                 </ul>
-                <form action="result.html" method="GET">
+                <form action="result.html" method="GET" id="myForm">
                     <fieldset>
                         <legend class="h">회원가입 입력양식폼</legend>
                         <h2>기본정보<i class="fas fa-star-of-life"></i></h2>
@@ -361,8 +371,11 @@
                                 <tr class="user_male">
                                     <th>성별</th>
                                     <td> 
-                                        <label for="male">  <input type="radio" id="male" name="gender" value="male" > 남성 </label>
-                                        <label for="female">  <input type="radio" id="female" name="gender" value="female" > 여성 </label>
+                                        <input type="radio" id="male" name="gender" value="male" >
+                                        <label for="male">남성</label>
+                                        
+                                        <input type="radio" id="female" name="gender" value="female" >
+                                        <label for="female">여성 </label>
                                     </td>
                                 </tr>
                                 <tr class="Agency">
