@@ -48,7 +48,7 @@
         }.bind(this));
     }
     MyValidation.prototype.isTxt = function(name){
-        var len = 5;    
+        var len = 2;    
         var txt = $("[name="+name+"]").val();
         var msg = $("[name="+name+"]").attr("placeholder");
     

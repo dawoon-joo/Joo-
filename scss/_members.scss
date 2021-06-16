@@ -130,6 +130,12 @@
                 border-top: 1px solid #333;
                 width: 100%; height: 200px;
                 margin-bottom: 50px;
+                input[type="text"].error,
+                input[type="password"].error,
+                select.error {
+                    background: #ffeafe;
+                    border: 1px solid #ff24ff;
+                }
                 tr{
                     display: block;
                     padding:20px; box-sizing: border-box;
@@ -208,7 +214,13 @@
                             height: 40px; width: 200px;
                             padding: 5px; box-sizing: border-box;
                             border-radius: 5px;
-                        }     
+                        }
+                    &.user_male td p,
+                    &.Agency td p{
+                        font: 12px/1 "맑은 고딕";
+                        color: hotpink;
+                        display: none;
+                    }
                 }
             }
             .box_table4{
