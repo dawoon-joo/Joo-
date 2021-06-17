@@ -5,7 +5,7 @@
         key : undefined,
         gallery : "#gallery",
         search : "#search",
-        count : 7,
+        count : 6,
         enableIsotpe : true
     }
 
