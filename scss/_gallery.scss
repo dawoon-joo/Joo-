@@ -262,8 +262,65 @@
     }
 }
 
-
 @media screen and (max-width: 1179px){
+    .content {
+        .inner {
+            width:  100%;        
+            #search {
+                padding: 0 50px;
+                input[type=text]{
+                    width: 70%; padding: 15px 10px;                    
+                }
+                button{
+                    width: 28%; padding: 15px 10px; 
+                }    
+            }
+            #gallery {                
+                ul {     
+                    li {
+                        width: calc(100% /2);                           
+                        &.item-sizer {
+                            width: calc(100% /2);
+                        }
+                    }
+                }
+            }
+            #sns_gallery{
+                width: 100%;
+                padding: 100px 20px 50px 20px; box-sizing: border-box;
+                h2{
+                    font:20px/1 'Noto Sans KR'; color: #333;
+                }
+                >ul{
+                    width: 100%;
+                    >li{
+                        width: 100%;
+                    }
+                }
+            }   
+            #txtinfo{
+                padding:50px 20px; box-sizing: border-box;
+                h2{
+                    font:20px/1 'Noto Sans KR'; color: #333;
+                    margin-bottom: 60px;
+                }
+                h3{
+                    font:18px/1.6 'arial'; color: #222;
+                    margin-bottom: 30px;
+                }
+                p{
+                    font:12px/2 'Noto Sans KR'; color: #888;
+                    margin-bottom: 50px;
+                }
+                a{
+                    font:14px/50px 'arial'; color: #333;    
+                }
+            }     
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
     .content {
         .inner {
             width:  100%;        

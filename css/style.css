@@ -1358,6 +1358,50 @@ input, a, button {
         width: 28%;
         padding: 15px 10px; }
     .content .inner #gallery ul li {
+      width: calc(100% /2); }
+      .content .inner #gallery ul li.item-sizer {
+        width: calc(100% /2); }
+    .content .inner #sns_gallery {
+      width: 100%;
+      padding: 100px 20px 50px 20px;
+      box-sizing: border-box; }
+      .content .inner #sns_gallery h2 {
+        font: 20px/1 'Noto Sans KR';
+        color: #333; }
+      .content .inner #sns_gallery > ul {
+        width: 100%; }
+        .content .inner #sns_gallery > ul > li {
+          width: 100%; }
+    .content .inner #txtinfo {
+      padding: 50px 20px;
+      box-sizing: border-box; }
+      .content .inner #txtinfo h2 {
+        font: 20px/1 'Noto Sans KR';
+        color: #333;
+        margin-bottom: 60px; }
+      .content .inner #txtinfo h3 {
+        font: 18px/1.6 'arial';
+        color: #222;
+        margin-bottom: 30px; }
+      .content .inner #txtinfo p {
+        font: 12px/2 'Noto Sans KR';
+        color: #888;
+        margin-bottom: 50px; }
+      .content .inner #txtinfo a {
+        font: 14px/50px 'arial';
+        color: #333; } }
+@media screen and (max-width: 800px) {
+  .content .inner {
+    width: 100%; }
+    .content .inner #search {
+      padding: 0 50px; }
+      .content .inner #search input[type=text] {
+        width: 70%;
+        padding: 15px 10px; }
+      .content .inner #search button {
+        width: 28%;
+        padding: 15px 10px; }
+    .content .inner #gallery ul li {
       width: 100%; }
       .content .inner #gallery ul li.item-sizer {
         width: 100%; }
