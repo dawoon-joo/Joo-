@@ -1682,7 +1682,6 @@ input, a, button {
         width: 25%;
         height: 150px;
         margin: 0 40px;
-        border-radius: 50px;
         position: relative;
         border: 1px solid #CDD6E1;
         background: #F6F8FA; }
@@ -1771,6 +1770,8 @@ input, a, button {
         #members .inner ul li p {
           line-height: 2; }
     #members .inner form h2 {
+      font: bold 22px/1 'Nto Sans KR';
+      color: #333;
       margin-bottom: 20px; }
       #members .inner form h2 .fa-star-of-life {
         display: inline-block;
@@ -1814,6 +1815,7 @@ input, a, button {
           height: 40px;
           border: 1px solid #CDD6E1;
           background: #F6F8FA;
+          vertical-align: bottom;
           color: #333;
           line-height: 40px;
           border-radius: 5px;
@@ -1910,6 +1912,240 @@ input, a, button {
         font: 14px/2 'Nto Sans KR';
         color: #666; }
 
+@media screen and (max-width: 1179px) {
+  #members {
+    padding: 100px 20px; }
+    #members .inner {
+      width: 100%; }
+      #members .inner .step li {
+        width: 25%;
+        height: 100px;
+        margin: 0 18px; }
+        #members .inner .step li .img_members {
+          display: none; }
+        #members .inner .step li .txt_members {
+          width: 100%;
+          left: 50%;
+          top: 50%;
+          right: 0;
+          transform: translate(-50%, -50%); }
+          #members .inner .step li .txt_members strong {
+            font: 14px/1 'arial'; }
+          #members .inner .step li .txt_members p {
+            font-size: 12px; }
+        #members .inner .step li::before {
+          top: 50%;
+          right: -35px;
+          transform: translateY(-50%);
+          width: 25px;
+          height: 25px; }
+      #members .inner > h2 {
+        font: bold 24px/1 'Nto Sans KR';
+        color: #333; }
+        #members .inner > h2.call_members::before {
+          width: 20px;
+          height: 20px; }
+      #members .inner ul li {
+        width: 40%;
+        margin: 0 15px;
+        font: 14px/1 'Nto Sans KR';
+        color: #333; }
+      #members .inner form h2 {
+        font: bold 20px/1 'Nto Sans KR';
+        color: #333; }
+        #members .inner form h2 .fa-star-of-life {
+          font-size: 12px; }
+      #members .inner form table tr th {
+        width: 30%;
+        font: 14px/1 'Noto Sans KR'; }
+      #members .inner form table tr td {
+        width: 68%;
+        padding: 20px  0; }
+        #members .inner form table tr td span {
+          font: 12px/1 'Noto Sans KR';
+          color: #005FAC; }
+      #members .inner form table tr a {
+        width: 80px;
+        height: 40px;
+        vertical-align: bottom;
+        font: 14px/40px 'Noto Sans KR'; }
+      #members .inner form table tr input[name=company] {
+        width: 150px; }
+      #members .inner form table tr input[id=Address] {
+        width: 200px; }
+      #members .inner form table tr.user_male label {
+        margin-right: 40px; }
+        #members .inner form table tr.user_male label:last-of-type {
+          margin-right: 0; }
+      #members .inner form table tr.Agency label {
+        margin-right: 40px; }
+        #members .inner form table tr.Agency label:last-of-type {
+          margin-right: 0; }
+      #members .inner form table tr.user_call input {
+        width: 50px; }
+      #members .inner form table tr #call {
+        height: 40px;
+        width: 60px;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 5px; }
+      #members .inner form table tr.user_agree1 label {
+        margin-right: 15px; }
+      #members .inner form table tr #company {
+        height: 40px;
+        width: 100px; }
+      #members .inner form table tr.user_male td p, #members .inner form table tr.Agency td p {
+        font: 12px/1 "맑은 고딕";
+        color: hotpink;
+        display: none; }
+      #members .inner form .box_table4 {
+        border: none;
+        height: 200px;
+        text-align: center; }
+        #members .inner form .box_table4 tr {
+          display: block;
+          padding: 20px;
+          box-sizing: border-box;
+          width: 100%; }
+          #members .inner form .box_table4 tr th {
+            padding: 0 20px;
+            display: inline-block;
+            width: 100%;
+            text-align-last: center;
+            margin-bottom: 10px; }
+          #members .inner form .box_table4 tr #agreecheck1 {
+            text-align: center; }
+        #members .inner form .box_table4.user_agree2 label {
+          font: 14px/1 'Nto Sans KR';
+          width: 100%; }
+        #members .inner form .box_table4 input[type=checkbox] {
+          margin-right: 5px; }
+        #members .inner form .box_table4 input[type=submit] {
+          width: 200px;
+          height: 50px;
+          transition: 0.5s; }
+          #members .inner form .box_table4 input[type=submit]:hover {
+            background: #282b3a;
+            color: #fff; }
+      #members .inner form .txtarea {
+        width: 100%;
+        margin-bottom: 50px; }
+        #members .inner form .txtarea h2 {
+          text-align: center;
+          font: bold 30px/1 'Nto Sans KR';
+          color: #333;
+          margin-bottom: 50px; }
+        #members .inner form .txtarea #terms {
+          width: 100%;
+          height: 300px;
+          padding: 10px 40px;
+          box-sizing: border-box;
+          font: 14px/2 'Nto Sans KR';
+          color: #666; } }
+@media screen and (max-width: 539px) {
+  #members .inner .step li {
+    width: 25%;
+    margin: 0 35px 0 0; }
+    #members .inner .step li:last-of-type {
+      margin-right: 0; }
+  #members .inner form h2 {
+    font: bold 16px/1 'Nto Sans KR';
+    color: #333; }
+    #members .inner form h2 .fa-star-of-life {
+      font-size: 10px; }
+  #members .inner form table tr {
+    padding: 0; }
+    #members .inner form table tr th {
+      width: 30%;
+      margin-bottom: 0;
+      font: 14px/1 'Noto Sans KR'; }
+    #members .inner form table tr td {
+      width: 100%;
+      padding: 10px 20px 20px; }
+      #members .inner form table tr td span {
+        font: 12px/1 'Noto Sans KR';
+        color: #005FAC; }
+    #members .inner form table tr a {
+      width: 80px;
+      height: 40px;
+      vertical-align: bottom;
+      font: 14px/40px 'Noto Sans KR'; }
+    #members .inner form table tr input[name=company] {
+      width: 150px; }
+    #members .inner form table tr input[id=Address] {
+      width: 200px; }
+    #members .inner form table tr.user_agree1 td span {
+      display: block;
+      margin-top: 10px; }
+    #members .inner form table tr.user_male label {
+      margin-right: 40px; }
+      #members .inner form table tr.user_male label:last-of-type {
+        margin-right: 0; }
+    #members .inner form table tr.Agency label {
+      margin-right: 40px; }
+      #members .inner form table tr.Agency label:last-of-type {
+        margin-right: 0; }
+    #members .inner form table tr.user_call input {
+      width: 50px; }
+    #members .inner form table tr #call {
+      height: 40px;
+      width: 60px;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 5px; }
+    #members .inner form table tr.user_agree1 label {
+      margin-right: 15px; }
+    #members .inner form table tr #company {
+      height: 40px;
+      width: 100px; }
+    #members .inner form table tr.user_male td p, #members .inner form table tr.Agency td p {
+      font: 12px/1 "맑은 고딕";
+      color: hotpink;
+      display: none; }
+  #members .inner form .box_table4 {
+    border: none;
+    height: 200px;
+    text-align: center; }
+    #members .inner form .box_table4 tr {
+      display: block;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%; }
+      #members .inner form .box_table4 tr th {
+        padding: 0 20px;
+        display: inline-block;
+        width: 100%;
+        text-align-last: center;
+        margin-bottom: 10px; }
+      #members .inner form .box_table4 tr #agreecheck1 {
+        text-align: center; }
+    #members .inner form .box_table4.user_agree2 label {
+      font: 14px/1 'Nto Sans KR';
+      width: 100%; }
+    #members .inner form .box_table4 input[type=checkbox] {
+      margin-right: 5px; }
+    #members .inner form .box_table4 input[type=submit] {
+      width: 200px;
+      height: 50px;
+      transition: 0.5s; }
+      #members .inner form .box_table4 input[type=submit]:hover {
+        background: #282b3a;
+        color: #fff; }
+  #members .inner form .txtarea {
+    width: 100%;
+    margin-bottom: 50px; }
+    #members .inner form .txtarea h2 {
+      text-align: center;
+      font: bold 30px/1 'Nto Sans KR';
+      color: #333;
+      margin-bottom: 50px; }
+    #members .inner form .txtarea #terms {
+      width: 100%;
+      height: 300px;
+      padding: 10px 40px;
+      box-sizing: border-box;
+      font: 14px/2 'Nto Sans KR';
+      color: #666; } }
 .news {
   width: 100%; }
   .news .sub_visual {
