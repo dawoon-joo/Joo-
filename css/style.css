@@ -594,6 +594,7 @@ input, a, button {
         padding: 30px 0;
         box-sizing: border-box; }
         #tab .inner .wrap ul li {
+          transition: 0.5s;
           float: left;
           width: 300px;
           height: 100%; }
@@ -677,6 +678,7 @@ input, a, button {
             text-align: center; }
 
 #vidGallery {
+  transition: 0.5s;
   width: 100%;
   height: 100%;
   padding-bottom: 100px;
@@ -761,6 +763,7 @@ input, a, button {
               font: 14px/1.2 'Bebas Neue';
               color: #888; }
     #vidGallery > .inner > article {
+      transition: 0.5s;
       width: calc(100% / 3 - 30px);
       height: 400px;
       background: #fff;
@@ -829,6 +832,297 @@ input, a, button {
               #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
                 font-size: 25px; }
 
+@media screen and (max-width: 1179px) {
+  #tab .inner {
+    width: 100%; }
+    #tab .inner .wrap {
+      height: 300px; }
+      #tab .inner .wrap > h1 {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+      #tab .inner .wrap ul {
+        position: static;
+        height: 100%;
+        padding: 50px 0;
+        box-sizing: border-box; }
+        #tab .inner .wrap ul::after {
+          display: block;
+          clear: both;
+          content: ""; }
+        #tab .inner .wrap ul li {
+          float: none;
+          display: block;
+          width: 100%;
+          height: 100px; }
+          #tab .inner .wrap ul li .imgbox {
+            width: 60px; }
+            #tab .inner .wrap ul li .imgbox a {
+              width: 60px;
+              height: 60px; }
+              #tab .inner .wrap ul li .imgbox a span {
+                text-align: center; }
+          #tab .inner .wrap ul li .txtbox {
+            width: 90%;
+            height: 100px;
+            padding: 10px 0;
+            box-sizing: border-box; }
+            #tab .inner .wrap ul li .txtbox strong {
+              display: block;
+              font: 16px/1 'Do Hyeon';
+              margin-bottom: 5px;
+              color: #444; }
+            #tab .inner .wrap ul li .txtbox p {
+              font: 14px/1.2 'Bebas Neue';
+              color: #888; }
+    #tab .inner > ul {
+      width: 100%; }
+      #tab .inner > ul::after {
+        content: "";
+        clear: both;
+        display: block; }
+      #tab .inner > ul li {
+        width: calc(100%);
+        height: 300px;
+        padding: 0px; }
+        #tab .inner > ul li div {
+          padding: 15px; }
+          #tab .inner > ul li div h2 {
+            font: bold 16px/1 'arial'; }
+          #tab .inner > ul li div p {
+            font: bold 14px/1 'arial'; }
+
+  #vidGallery {
+    padding: 0 20px 50px; }
+    #vidGallery > .inner {
+      width: 100%; }
+      #vidGallery > .inner .wrap {
+        width: 100%;
+        height: 150px;
+        position: relative; }
+        #vidGallery > .inner .wrap > h1 {
+          width: 200px;
+          height: 50px;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+        #vidGallery > .inner .wrap ul {
+          display: none; }
+      #vidGallery > .inner > article {
+        width: calc(100% / 2 - 10px);
+        height: 400px;
+        float: left;
+        margin-right: 20px; }
+        #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(4), #vidGallery > .inner > article:nth-of-type(6) {
+          margin: 0 0 30px 0; }
+        #vidGallery > .inner > article:nth-of-type(5) {
+          margin: 0 20px 30px 0; }
+        #vidGallery > .inner > article .pic {
+          display: block;
+          width: 100%;
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 1s; }
+          #vidGallery > .inner > article .pic:hover {
+            transform: scale(1.1); }
+        #vidGallery > .inner > article .con {
+          width: 100%;
+          height: 200px;
+          display: block;
+          position: relative;
+          padding: 20px;
+          box-sizing: border-box; }
+          #vidGallery > .inner > article .con h2 {
+            font: 20px/1 "Do Hyeon";
+            color: #444;
+            margin-bottom: 10px; }
+          #vidGallery > .inner > article .con p {
+            font: 16px/1.3 "Bebas Neue";
+            color: #888;
+            margin-bottom: 15px; }
+          #vidGallery > .inner > article .con span {
+            font: 12px/1 'Do Hyeon';
+            color: #555; }
+          #vidGallery > .inner > article .con .more {
+            display: block;
+            width: 100px;
+            height: 30px;
+            background: #eee;
+            text-align: center;
+            border-radius: 5px;
+            font: 14px/30px 'arial';
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            transition: 0.5s; }
+            #vidGallery > .inner > article .con .more:hover {
+              background: #475568;
+              color: #fff; }
+          #vidGallery > .inner > article .con .sns {
+            position: absolute;
+            right: 20px;
+            bottom: 20px; }
+            #vidGallery > .inner > article .con .sns li {
+              float: left; }
+              #vidGallery > .inner > article .con .sns li a {
+                display: block;
+                margin-left: 10px; }
+                #vidGallery > .inner > article .con .sns li a .fa-instagram-square {
+                  font-size: 25px; }
+                #vidGallery > .inner > article .con .sns li a .fa-twitter-square {
+                  font-size: 25px; }
+                #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
+                  font-size: 25px; } }
+@media screen and (max-width: 800px) {
+  #tab .inner .wrap ul {
+    position: static;
+    height: 100%;
+    padding: 50px 0;
+    box-sizing: border-box; }
+    #tab .inner .wrap ul::after {
+      display: block;
+      clear: both;
+      content: ""; }
+    #tab .inner .wrap ul li .imgbox {
+      width: 60px; }
+      #tab .inner .wrap ul li .imgbox a {
+        width: 60px;
+        height: 60px; }
+        #tab .inner .wrap ul li .imgbox a span {
+          text-align: center; }
+    #tab .inner .wrap ul li .txtbox {
+      width: 80%;
+      height: 100px;
+      padding: 10px 0;
+      box-sizing: border-box; }
+      #tab .inner .wrap ul li .txtbox strong {
+        display: block;
+        font: 16px/1 'Do Hyeon';
+        margin-bottom: 5px;
+        color: #444; }
+      #tab .inner .wrap ul li .txtbox p {
+        font: 14px/1.2 'Bebas Neue';
+        color: #888; }
+  #tab .inner > ul {
+    width: 100%; }
+    #tab .inner > ul::after {
+      content: "";
+      clear: both;
+      display: block; }
+    #tab .inner > ul li {
+      width: calc(100%);
+      height: 300px;
+      padding: 0px; }
+      #tab .inner > ul li div {
+        padding: 15px; }
+        #tab .inner > ul li div h2 {
+          font: bold 16px/1 'arial'; }
+        #tab .inner > ul li div p {
+          font: bold 14px/1 'arial'; }
+
+  #vidGallery {
+    padding: 0 20px 50px; }
+    #vidGallery > .inner {
+      width: 100%; }
+      #vidGallery > .inner .wrap {
+        width: 100%;
+        height: 150px;
+        position: relative; }
+        #vidGallery > .inner .wrap > h1 {
+          width: 200px;
+          height: 50px;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+        #vidGallery > .inner .wrap ul {
+          display: none; }
+      #vidGallery > .inner > article {
+        width: calc(100%);
+        height: 400px;
+        float: none; }
+        #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(5) {
+          margin: 0 0 30px 0; }
+        #vidGallery > .inner > article .pic {
+          display: block;
+          width: 100%;
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 1s; }
+          #vidGallery > .inner > article .pic:hover {
+            transform: scale(1.1); }
+        #vidGallery > .inner > article .con {
+          width: 100%;
+          height: 200px;
+          display: block;
+          position: relative;
+          padding: 20px;
+          box-sizing: border-box; }
+          #vidGallery > .inner > article .con h2 {
+            font: 20px/1 "Do Hyeon";
+            color: #444;
+            margin-bottom: 10px; }
+          #vidGallery > .inner > article .con p {
+            font: 16px/1.3 "Bebas Neue";
+            color: #888;
+            margin-bottom: 15px; }
+          #vidGallery > .inner > article .con span {
+            font: 12px/1 'Do Hyeon';
+            color: #555; }
+          #vidGallery > .inner > article .con .more {
+            display: block;
+            width: 100px;
+            height: 30px;
+            background: #eee;
+            text-align: center;
+            border-radius: 5px;
+            font: 14px/30px 'arial';
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            transition: 0.5s; }
+            #vidGallery > .inner > article .con .more:hover {
+              background: #475568;
+              color: #fff; }
+          #vidGallery > .inner > article .con .sns {
+            position: absolute;
+            right: 20px;
+            bottom: 20px; }
+            #vidGallery > .inner > article .con .sns li {
+              float: left; }
+              #vidGallery > .inner > article .con .sns li a {
+                display: block;
+                margin-left: 10px; }
+                #vidGallery > .inner > article .con .sns li a .fa-instagram-square {
+                  font-size: 25px; }
+                #vidGallery > .inner > article .con .sns li a .fa-twitter-square {
+                  font-size: 25px; }
+                #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
+                  font-size: 25px; } }
+@media screen and (max-width: 539px) {
+  #tab .inner .wrap ul li .imgbox {
+    width: 25%; }
+  #tab .inner .wrap ul li .txtbox {
+    width: 70%; }
+    #tab .inner .wrap ul li .txtbox strong {
+      font: 14px/1 'Do Hyeon'; }
+    #tab .inner .wrap ul li .txtbox p {
+      font: 12px/1.2 'Bebas Neue'; }
+
+  #vidGallery > .inner > article .con h2 {
+    font: 18px/1 "Do Hyeon";
+    color: #444;
+    margin-bottom: 10px; }
+  #vidGallery > .inner > article .con p {
+    font: 14px/1.3 "Bebas Neue";
+    color: #888;
+    margin-bottom: 15px; }
+  #vidGallery > .inner > article .con span {
+    font: 12px/1 'Do Hyeon';
+    color: #555; } }
 .gallery {
   width: 100%; }
   .gallery .sub_visual {
