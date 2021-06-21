@@ -42,7 +42,7 @@
 
         //처음 로딩시 type을 interest로 지정해서 getList함수 호출      
         this.getList({
-            type: "interest"
+            type: "user"
         });  
 
         //타이틀 클릭시 다시 초기화면 보이기
@@ -110,7 +110,7 @@
                     format: "json",
                     nojsoncallback: 1,
                     tagmode: "any",
-                    privacy_filter: 5
+                    privacy_filter: 5,
                 }
             }
         }
@@ -144,7 +144,7 @@
                     nojsoncallback: 1,
                     tagmode: "any",
                     privacy_filter: 5,
-                    user_id: opt.user
+                    user_id: "192929270@N04"
                 }
             }
         }
@@ -178,31 +178,32 @@
             $gallery.children("ul").append(
                 $("<li class='item'>").append(
                     $("<div class='inner'>")
-                    .append(
-                        $("<a>").attr({
-                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                        }).append(
-                            $("<img>").attr({
-                                src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_w.jpg",
-                                onerror : "javascript:this.parentNode.parentNode.parentNode.style='display:none;'"
-                            }),
-                            $("<p>").text(text),
-                            $("<div class='profile'>")
-                                .append(
-                                    $("<img>").attr({src: "https://www.flickr.com/buddyicons/"+data.owner+".jpg"}),
-                                    $("<span>").text(data.owner)
-                                ) 
-                        )                        
-                    )                    
-                    .append(
-                        $("<div class='text_gallery'>")
                         .append(
-                            $("<h3>").text("lorem lorem lorem"),
-                            $("<p>").text("lorem lorem"),
-                            
+                            $("<div class='img_gallery'>")
+                                .append(
+                                    $("<a>").attr({
+                                        href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                                    }).append(
+                                        $("<img>").attr({
+                                            src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_w.jpg",
+                                            onerror : "javascript:this.parentNode.parentNode.parentNode.style='display:none;'"
+                                        }),
+                                        $("<p>").text(text),
+                                    )                        
+                                )
+                        )                    
+                        .append(
+                            $("<div class='text_gallery'>")
+                        .append(
+                            $("<h3>").text("Lorem, ipsum dolor."),
+                            $("<p>").text("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque facilis quas consequatur similique officiis nulla, a asperiores totam maxime repellat"),
+                            $("<div class='profile'>")
+                            .append(
+                                $("<img>").attr({src: "https://www.flickr.com/buddyicons/"+data.owner+".jpg"}),
+                                $("<span>").text(data.owner)
+                            )
                         )
                     )
-                    
                 )
             )
         }.bind(this));       
