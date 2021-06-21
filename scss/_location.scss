@@ -21,7 +21,7 @@
             text-align: center;
             &::after{content: ""; display: block; clear: both;}
             h3{
-                font:16px/1 'arial'; color: #cfb6a4;
+                font:16px/1 'arial'; color: #005FAC;
                 margin-bottom: 10px;
             }
             h2{
@@ -42,7 +42,7 @@
             
                     a{
                         display:block; width:200px; height:40px; 
-                        background: #efefef; 
+                        background: #F6F8FA; 
                         font:bold 12px/40px 'Noto Sans KR'; color:#333; 
                         text-align:center; 
                         transition: 0.5s;
@@ -66,7 +66,7 @@
                     float:left; margin-right:10px; 
                     a{
                         display:block; width:150px; height:40px; 
-                        background:#efefef;
+                        background:#F6F8FA;
                         font:bold 12px/40px 'Noto Sans KR'; color:#333; 
                         text-align:center; 
                         transition: 0.5s;
@@ -84,7 +84,7 @@
             text-align: center;
             padding: 50px 0; box-sizing: border-box;
             h3{
-                font:16px/1 'arial'; color: #cfb6a4;
+                font:16px/1 'arial'; color: #005FAC;
                 margin-bottom: 10px;
             }
             h2{
@@ -105,8 +105,8 @@
                 }
                 ul{
                     width: 100%;
-                    border-top: 1px solid #e8e8e8;
-                    border-bottom: 1px solid #e8e8e8;
+                    border-top: 1px solid #CDD6E1;
+                    border-bottom: 1px solid #CDD6E1;
                     &::after{content: ""; clear: both; display: block;}
                     li{
                         float: left;
@@ -114,8 +114,8 @@
                         font: 16px/1 'arial'; color: #333;
                         &:nth-of-type(1){
                             width: 30%;
-                            background:#fafafa;
-                            border-right: 1px solid #e8e8e8;
+                            background:#F6F8FA;
+                            border-right: 1px solid #CDD6E1;
                         }
                         &:nth-of-type(2){
                             width: 70%;
@@ -138,8 +138,8 @@
                 }
                 ul{
                     width: 100%;
-                    border-top: 1px solid #e8e8e8;
-                    border-bottom: 1px solid #e8e8e8;
+                    border-top: 1px solid #CDD6E1;
+                    border-bottom: 1px solid #CDD6E1;
                     &::after{content: ""; clear: both; display: block;}
                     li{
                         float: left;
@@ -147,8 +147,8 @@
                         font: 16px/1 'arial'; color: #333;
                         &:nth-of-type(1){
                             width: 30%;
-                            background:#fafafa;
-                            border-right: 1px solid #e8e8e8;
+                            background:#F6F8FA;
+                            border-right: 1px solid #CDD6E1;
                             
                         }
                         &:nth-of-type(2){
@@ -165,7 +165,7 @@
             text-align: center;
             padding: 50px 0; box-sizing: border-box;
             h3{
-                font:16px/1 'arial'; color: #cfb6a4;
+                font:16px/1 'arial'; color: #005FAC;
                 margin-bottom: 10px;
             }
             h2{
@@ -181,8 +181,8 @@
                 thead{
                     width: 100%;
                     tr{
-                        border-top: 1px solid #cfb6a4;
-                        border-bottom: 1px solid #e8e8e8;
+                        border-top: 1px solid #005FAC;
+                        border-bottom: 1px solid #CDD6E1;
                         font:bold 16px/1 'arial'; color: #333;
                         th{
                             width: calc(100% / 4);
@@ -194,12 +194,237 @@
                     width: 100%;
                     tr{
                         width: 100%;
-                        border-bottom: 1px solid #e8e8e8;
-                        background: #fafafa;
+                        border-bottom: 1px solid #CDD6E1;
+                        background: #F6F8FA;
                         font:14px/1 'arial'; color: #888;
                         td{
                             width: calc(100% / 4);
                             padding: 25px 0; box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1179px){
+    #location{
+        padding: 50px 20px;
+        .inner{
+            width: 100%;
+            .map{
+                h3{
+                    font:14px/1 'arial'; color: #cfb6a4;
+                }
+                h2{
+                    font:bold 22px/1 'Noto Sans KR'; color: #444;
+                }
+                #map{
+                    width:100%;
+                    height:400px;
+                    margin-top: 10px; 
+                    background:#000; 
+                }
+                .traffic{
+                    float:none; margin-bottom: 20px;
+                    display: inline-block;
+                
+                    li{
+                        float:left; margin-right:10px; 
+                
+                        a{
+                            display:block; width:200px; height:40px; 
+                            font:bold 12px/40px 'Noto Sans KR'; color:#333; 
+                        }                
+                    }
+                }
+                .branch {
+                    display: inline-block;
+                    float:none; margin-bottom:20px; 
+                    li{
+                        float:left; margin-right:10px; 
+                        a{
+                            display:block; width:150px; height:40px; ;
+                            font:bold 12px/40px 'Noto Sans KR'; color:#333; 
+                        }
+                    }
+                }
+            }
+            .transportation{
+                h3{
+                    font:14px/1 'arial';
+                }
+                h2{
+                    font:bold 22px/1 'Noto Sans KR';
+                }
+                .bus{
+                    p{
+                        font:bold 18px/1 'arial';
+                    }
+                    ul{
+                        li{
+                            font: 12px/1 'arial';
+                            &:nth-of-type(1){
+                                width: 30%;
+                            }
+                            &:nth-of-type(2){
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+                .subway{
+                    p{
+                        font:bold 18px/1 'arial';
+                    }
+                    ul{
+                        li{
+                            font: 12px/1 'arial';
+                            &:nth-of-type(1){
+                                width: 30%;                                
+                            }
+                            &:nth-of-type(2){
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+            .parking{
+                h3{
+                    font:14px/1 'arial';
+                }
+                h2{
+                    font:bold 22px/1 'Noto Sans KR';
+                }
+                table{
+                    thead{
+                        tr{
+                            font:bold 14px/1 'arial'; color: #333;
+                            th{
+                                width: calc(100% / 4);
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            font:12px/1 'arial'; color: #888;
+                            td{
+                                width: calc(100% / 4);
+                                padding: 25px 0; box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #location{
+        .inner{
+            .map{
+                h3{
+                    font:12px/1 'arial'; color: #cfb6a4;
+                }
+                h2{
+                    font:bold 20px/1 'Noto Sans KR'; color: #444;
+                }
+                #map{
+                    height:300px;
+                }
+                .traffic{
+                    width: 100%;                
+                    li{
+                        width: 49%;
+                        float:left; margin-right:2%;
+                        &:last-of-type{margin-right: 0;} 
+                
+                        a{
+                            width:100%; 
+                        }                
+                    }
+                }
+                .branch {
+                    width: 100%; 
+                    li{
+                        width: 32%;
+                        float:left; margin-right:2%;
+                        &:last-of-type{margin-right: 0;} 
+                        a{
+                            display:block; width:100%; height:40px; ;
+                            font:bold 12px/40px 'Noto Sans KR'; color:#333; 
+                        }
+                    }
+                }
+            }
+            .transportation{
+                h3{
+                    font:12px/1 'arial';
+                }
+                h2{
+                    font:bold 20px/1 'Noto Sans KR';
+                }
+                .bus{
+                    p{
+                        font:bold 16px/1 'arial';
+                    }
+                    ul{
+                        li{
+                            font: 10px/1.2 'arial';
+                            &:nth-of-type(1){
+                                width: 30%;
+                            }
+                            &:nth-of-type(2){
+                                width: 70%;
+                                padding:25px 0 0 25px;
+                            }
+                        }
+                    }
+                }
+                .subway{
+                    p{
+                        font:bold 16px/1 'arial';
+                    }
+                    ul{
+                        li{
+                            font: 10px/1 'arial';
+                            &:nth-of-type(1){
+                                width: 30%;                                
+                            }
+                            &:nth-of-type(2){
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+            .parking{
+                h3{
+                    font:12px/1 'arial';
+                }
+                h2{
+                    font:bold 20px/1 'Noto Sans KR';
+                }
+                table{
+                    thead{
+                        tr{
+                            font:bold 12px/1 'arial'; color: #333;
+                            th{
+                                width: calc(100% / 4);
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            font:10px/1 'arial'; color: #888;
+                            td{
+                                width: calc(100% / 4);
+                                padding: 25px 0; box-sizing: border-box;
+                            }
                         }
                     }
                 }

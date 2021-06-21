@@ -1490,7 +1490,7 @@ input, a, button {
         clear: both; }
       #location .inner .map h3 {
         font: 16px/1 'arial';
-        color: #cfb6a4;
+        color: #005FAC;
         margin-bottom: 10px; }
       #location .inner .map h2 {
         font: bold 24px/1 'Noto Sans KR';
@@ -1511,7 +1511,7 @@ input, a, button {
             display: block;
             width: 200px;
             height: 40px;
-            background: #efefef;
+            background: #F6F8FA;
             font: bold 12px/40px 'Noto Sans KR';
             color: #333;
             text-align: center;
@@ -1532,7 +1532,7 @@ input, a, button {
             display: block;
             width: 150px;
             height: 40px;
-            background: #efefef;
+            background: #F6F8FA;
             font: bold 12px/40px 'Noto Sans KR';
             color: #333;
             text-align: center;
@@ -1547,7 +1547,7 @@ input, a, button {
       box-sizing: border-box; }
       #location .inner .transportation h3 {
         font: 16px/1 'arial';
-        color: #cfb6a4;
+        color: #005FAC;
         margin-bottom: 10px; }
       #location .inner .transportation h2 {
         font: bold 24px/1 'Noto Sans KR';
@@ -1566,8 +1566,8 @@ input, a, button {
             margin-right: 5px; }
         #location .inner .transportation .bus ul {
           width: 100%;
-          border-top: 1px solid #e8e8e8;
-          border-bottom: 1px solid #e8e8e8; }
+          border-top: 1px solid #CDD6E1;
+          border-bottom: 1px solid #CDD6E1; }
           #location .inner .transportation .bus ul::after {
             content: "";
             clear: both;
@@ -1579,8 +1579,8 @@ input, a, button {
             color: #333; }
             #location .inner .transportation .bus ul li:nth-of-type(1) {
               width: 30%;
-              background: #fafafa;
-              border-right: 1px solid #e8e8e8; }
+              background: #F6F8FA;
+              border-right: 1px solid #CDD6E1; }
             #location .inner .transportation .bus ul li:nth-of-type(2) {
               width: 70%;
               text-align-last: left;
@@ -1597,8 +1597,8 @@ input, a, button {
             margin-right: 5px; }
         #location .inner .transportation .subway ul {
           width: 100%;
-          border-top: 1px solid #e8e8e8;
-          border-bottom: 1px solid #e8e8e8; }
+          border-top: 1px solid #CDD6E1;
+          border-bottom: 1px solid #CDD6E1; }
           #location .inner .transportation .subway ul::after {
             content: "";
             clear: both;
@@ -1610,8 +1610,8 @@ input, a, button {
             color: #333; }
             #location .inner .transportation .subway ul li:nth-of-type(1) {
               width: 30%;
-              background: #fafafa;
-              border-right: 1px solid #e8e8e8; }
+              background: #F6F8FA;
+              border-right: 1px solid #CDD6E1; }
             #location .inner .transportation .subway ul li:nth-of-type(2) {
               width: 70%;
               text-align-last: left;
@@ -1623,7 +1623,7 @@ input, a, button {
       box-sizing: border-box; }
       #location .inner .parking h3 {
         font: 16px/1 'arial';
-        color: #cfb6a4;
+        color: #005FAC;
         margin-bottom: 10px; }
       #location .inner .parking h2 {
         font: bold 24px/1 'Noto Sans KR';
@@ -1640,8 +1640,8 @@ input, a, button {
         #location .inner .parking table thead {
           width: 100%; }
           #location .inner .parking table thead tr {
-            border-top: 1px solid #cfb6a4;
-            border-bottom: 1px solid #e8e8e8;
+            border-top: 1px solid #005FAC;
+            border-bottom: 1px solid #CDD6E1;
             font: bold 16px/1 'arial';
             color: #333; }
             #location .inner .parking table thead tr th {
@@ -1652,8 +1652,8 @@ input, a, button {
           width: 100%; }
           #location .inner .parking table tbody tr {
             width: 100%;
-            border-bottom: 1px solid #e8e8e8;
-            background: #fafafa;
+            border-bottom: 1px solid #CDD6E1;
+            background: #F6F8FA;
             font: 14px/1 'arial';
             color: #888; }
             #location .inner .parking table tbody tr td {
@@ -1661,6 +1661,154 @@ input, a, button {
               padding: 25px 0;
               box-sizing: border-box; }
 
+@media screen and (max-width: 1179px) {
+  #location {
+    padding: 50px 20px; }
+    #location .inner {
+      width: 100%; }
+      #location .inner .map h3 {
+        font: 14px/1 'arial';
+        color: #cfb6a4; }
+      #location .inner .map h2 {
+        font: bold 22px/1 'Noto Sans KR';
+        color: #444; }
+      #location .inner .map #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 10px;
+        background: #000; }
+      #location .inner .map .traffic {
+        float: none;
+        margin-bottom: 20px;
+        display: inline-block; }
+        #location .inner .map .traffic li {
+          float: left;
+          margin-right: 10px; }
+          #location .inner .map .traffic li a {
+            display: block;
+            width: 200px;
+            height: 40px;
+            font: bold 12px/40px 'Noto Sans KR';
+            color: #333; }
+      #location .inner .map .branch {
+        display: inline-block;
+        float: none;
+        margin-bottom: 20px; }
+        #location .inner .map .branch li {
+          float: left;
+          margin-right: 10px; }
+          #location .inner .map .branch li a {
+            display: block;
+            width: 150px;
+            height: 40px;
+            font: bold 12px/40px 'Noto Sans KR';
+            color: #333; }
+      #location .inner .transportation h3 {
+        font: 14px/1 'arial'; }
+      #location .inner .transportation h2 {
+        font: bold 22px/1 'Noto Sans KR'; }
+      #location .inner .transportation .bus p {
+        font: bold 18px/1 'arial'; }
+      #location .inner .transportation .bus ul li {
+        font: 12px/1 'arial'; }
+        #location .inner .transportation .bus ul li:nth-of-type(1) {
+          width: 30%; }
+        #location .inner .transportation .bus ul li:nth-of-type(2) {
+          width: 70%; }
+      #location .inner .transportation .subway p {
+        font: bold 18px/1 'arial'; }
+      #location .inner .transportation .subway ul li {
+        font: 12px/1 'arial'; }
+        #location .inner .transportation .subway ul li:nth-of-type(1) {
+          width: 30%; }
+        #location .inner .transportation .subway ul li:nth-of-type(2) {
+          width: 70%; }
+      #location .inner .parking h3 {
+        font: 14px/1 'arial'; }
+      #location .inner .parking h2 {
+        font: bold 22px/1 'Noto Sans KR'; }
+      #location .inner .parking table thead tr {
+        font: bold 14px/1 'arial';
+        color: #333; }
+        #location .inner .parking table thead tr th {
+          width: calc(100% / 4); }
+      #location .inner .parking table tbody tr {
+        font: 12px/1 'arial';
+        color: #888; }
+        #location .inner .parking table tbody tr td {
+          width: calc(100% / 4);
+          padding: 25px 0;
+          box-sizing: border-box; } }
+@media screen and (max-width: 539px) {
+  #location .inner .map h3 {
+    font: 12px/1 'arial';
+    color: #cfb6a4; }
+  #location .inner .map h2 {
+    font: bold 20px/1 'Noto Sans KR';
+    color: #444; }
+  #location .inner .map #map {
+    height: 300px; }
+  #location .inner .map .traffic {
+    width: 100%; }
+    #location .inner .map .traffic li {
+      width: 49%;
+      float: left;
+      margin-right: 2%; }
+      #location .inner .map .traffic li:last-of-type {
+        margin-right: 0; }
+      #location .inner .map .traffic li a {
+        width: 100%; }
+  #location .inner .map .branch {
+    width: 100%; }
+    #location .inner .map .branch li {
+      width: 32%;
+      float: left;
+      margin-right: 2%; }
+      #location .inner .map .branch li:last-of-type {
+        margin-right: 0; }
+      #location .inner .map .branch li a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        font: bold 12px/40px 'Noto Sans KR';
+        color: #333; }
+  #location .inner .transportation h3 {
+    font: 12px/1 'arial'; }
+  #location .inner .transportation h2 {
+    font: bold 20px/1 'Noto Sans KR'; }
+  #location .inner .transportation .bus p {
+    font: bold 16px/1 'arial'; }
+  #location .inner .transportation .bus ul li {
+    font: 10px/1.2 'arial'; }
+    #location .inner .transportation .bus ul li:nth-of-type(1) {
+      width: 30%; }
+    #location .inner .transportation .bus ul li:nth-of-type(2) {
+      width: 70%;
+      padding: 25px 0 0 25px; }
+  #location .inner .transportation .subway p {
+    font: bold 16px/1 'arial'; }
+  #location .inner .transportation .subway ul li {
+    font: 10px/1 'arial'; }
+    #location .inner .transportation .subway ul li:nth-of-type(1) {
+      width: 30%; }
+    #location .inner .transportation .subway ul li:nth-of-type(2) {
+      width: 70%; }
+  #location .inner .parking h3 {
+    font: 12px/1 'arial'; }
+  #location .inner .parking h2 {
+    font: bold 20px/1 'Noto Sans KR'; }
+  #location .inner .parking table thead tr {
+    font: bold 12px/1 'arial';
+    color: #333; }
+    #location .inner .parking table thead tr th {
+      width: calc(100% / 4); }
+  #location .inner .parking table tbody tr {
+    font: 10px/1 'arial';
+    color: #888; }
+    #location .inner .parking table tbody tr td {
+      width: calc(100% / 4);
+      padding: 25px 0;
+      box-sizing: border-box; } }
 .members {
   width: 100%; }
   .members .sub_visual {
