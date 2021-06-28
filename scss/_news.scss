@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
 //font-family: 'Noto Sans KR', sans-serif;
+/*
+background:#F6F8FA;
+border: 1px solid #CDD6E1;
+*/
 
 .news{
     width: 100%;
@@ -9,13 +13,13 @@
     }
 
     >.inner{
-        width: 1180px; margin: 0 auto; padding: 50px 0;
+        width: 1180px; margin: 0 auto; padding: 50px 0 150px 0;
         box-sizing: border-box;
         &::after{display: block; content: ""; clear: both;}
         
         #news_tab{
             width:100%; 
-            border:1px solid #000; 
+            border:1px solid #CDD6E1; 
             margin:100px auto; 
         
             ul{
@@ -30,21 +34,21 @@
                         display:block; 
                         width:100%; 
                         height:40px; 
-                        background:#666; 
+                        background:#F6F8FA; 
                         font:bold 12px/40px 'arial'; 
-                        color:#bbb; 
+                        color:#666; 
                         text-align:center;                 
                     }
                     &.on a{
-                        background:#fff; 
-                        color:#444; 
+                        background:#282b3a; 
+                        color:#fff; 
                     }
                 }
             }
         
             .group >div{
                 width:100%; 
-                height:200px; 
+                height:300px; 
                 background:#fff; 
                 font:bold 20px/200px 'arial'; 
                 color:#444; 

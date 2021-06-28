@@ -1472,7 +1472,7 @@ input, a, button {
 
 #location {
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
   box-sizing: border-box; }
   #location .inner {
     width: 1180px;
@@ -1658,6 +1658,156 @@ input, a, button {
               box-sizing: border-box; }
 
 @media screen and (max-width: 1179px) {
+  #company {
+    width: 100%;
+    padding: 100px 0;
+    box-sizing: border-box; }
+    #company .inner {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+      #company .inner h3 {
+        font: 16px/1 'arial';
+        color: #005FAC;
+        margin-bottom: 10px; }
+      #company .inner h2 {
+        font: bold 24px/1 'Noto Sans KR';
+        color: #444;
+        margin-bottom: 50px; }
+      #company .inner .company_list {
+        width: 100%; }
+        #company .inner .company_list > li > span {
+          display: block;
+          margin: 0 auto;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          line-height: 100px;
+          background: #F6F8FA;
+          border: 1px solid #CDD6E1;
+          font: 18px/100px 'Noto Sans KR';
+          color: #005FAC; }
+        #company .inner .company_list > li > ul {
+          margin-top: 100px; }
+          #company .inner .company_list > li > ul::after {
+            clear: both;
+            display: block;
+            content: ""; }
+          #company .inner .company_list > li > ul > li {
+            float: left;
+            width: 33.333%; }
+            #company .inner .company_list > li > ul > li:nth-of-type(2) .cmy_pic::after {
+              display: block;
+              content: "";
+              width: 2px;
+              height: 71px;
+              background: #CDD6E1;
+              position: absolute;
+              top: -119%;
+              left: 50%;
+              transform: translateX(-50%); }
+            #company .inner .company_list > li > ul > li:nth-of-type(1) .cmy_pic::before {
+              display: block;
+              content: "";
+              width: 786px;
+              height: 2px;
+              background: #CDD6E1;
+              position: absolute;
+              top: -34%;
+              left: 50%; }
+            #company .inner .company_list > li > ul > li > div {
+              width: 150px;
+              height: 80px;
+              margin: 0 auto;
+              background: #F6F8FA;
+              border: 1px solid #CDD6E1;
+              font: 16px/100px 'Noto Sans KR';
+              color: #005FAC;
+              line-height: 90px;
+              position: relative; }
+              #company .inner .company_list > li > ul > li > div::before {
+                display: block;
+                content: "";
+                width: 2px;
+                height: 51px;
+                position: absolute;
+                bottom: -66%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #CDD6E1; }
+              #company .inner .company_list > li > ul > li > div .cmy_pic {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                top: 0%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #005FAC;
+                border-radius: 50%; }
+                #company .inner .company_list > li > ul > li > div .cmy_pic::after {
+                  display: block;
+                  content: "";
+                  width: 2px;
+                  height: 20px;
+                  background: #CDD6E1;
+                  position: absolute;
+                  top: -25%;
+                  left: 50%;
+                  transform: translate(-50%, -25%); }
+                #company .inner .company_list > li > ul > li > div .cmy_pic .fa-prescription-bottle,
+                #company .inner .company_list > li > ul > li > div .cmy_pic .fa-briefcase,
+                #company .inner .company_list > li > ul > li > div .cmy_pic .fa-file-alt {
+                  color: #fff;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 30px; }
+            #company .inner .company_list > li > ul > li > ul {
+              margin-top: 80px;
+              width: 100%; }
+              #company .inner .company_list > li > ul > li > ul::after {
+                clear: both;
+                content: "";
+                display: block; }
+              #company .inner .company_list > li > ul > li > ul > li {
+                position: relative;
+                float: left;
+                width: 49.999%; }
+                #company .inner .company_list > li > ul > li > ul > li::after {
+                  display: block;
+                  content: "";
+                  width: 2px;
+                  height: 31px;
+                  background: #CDD6E1;
+                  position: absolute;
+                  top: -25%;
+                  left: 50%;
+                  transform: translateX(-50%); }
+                #company .inner .company_list > li > ul > li > ul > li:nth-of-type(1)::before {
+                  display: block;
+                  content: "";
+                  height: 2px;
+                  width: 196px;
+                  background: #CDD6E1;
+                  position: absolute;
+                  top: -25%;
+                  left: 50%; }
+                #company .inner .company_list > li > ul > li > ul > li span {
+                  display: block;
+                  width: 90%;
+                  height: 40px;
+                  line-height: 30px;
+                  margin: 0 auto;
+                  background: #F6F8FA;
+                  border: 1px solid #CDD6E1;
+                  font: 14px/40px 'Noto Sans KR';
+                  color: #005FAC; }
+                  #company .inner .company_list > li > ul > li > ul > li span:nth-of-type(1) {
+                    background: #282b3a;
+                    font: 16px/40px 'Noto Sans KR';
+                    color: #fff; }
+
   #location {
     padding: 50px 20px; }
     #location .inner {
@@ -1736,6 +1886,91 @@ input, a, button {
           padding: 25px 0;
           box-sizing: border-box; } }
 @media screen and (max-width: 539px) {
+  #company {
+    width: 100%;
+    padding: 100px 0;
+    box-sizing: border-box; }
+    #company .inner {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+      #company .inner h3 {
+        font: 16px/1 'arial';
+        color: #005FAC;
+        margin-bottom: 10px; }
+      #company .inner h2 {
+        font: bold 24px/1 'Noto Sans KR';
+        color: #444;
+        margin-bottom: 50px; }
+      #company .inner .company_list {
+        width: 100%; }
+        #company .inner .company_list > li > ul {
+          margin-top: 100px; }
+          #company .inner .company_list > li > ul > li {
+            float: left;
+            width: 100%;
+            margin-bottom: 80px; }
+            #company .inner .company_list > li > ul > li:nth-of-type(2) .cmy_pic::after {
+              display: none; }
+            #company .inner .company_list > li > ul > li:nth-of-type(1) .cmy_pic::before {
+              display: none; }
+            #company .inner .company_list > li > ul > li > div::before {
+              display: block;
+              content: "";
+              width: 2px;
+              height: 34px;
+              position: absolute;
+              bottom: -44%;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #CDD6E1; }
+            #company .inner .company_list > li > ul > li > div .cmy_pic::after {
+              display: none; }
+            #company .inner .company_list > li > ul > li > ul {
+              margin-top: 50px;
+              width: 100%; }
+              #company .inner .company_list > li > ul > li > ul::after {
+                clear: both;
+                content: "";
+                display: block; }
+              #company .inner .company_list > li > ul > li > ul > li {
+                position: relative;
+                float: left;
+                width: 49.999%; }
+                #company .inner .company_list > li > ul > li > ul > li::after {
+                  display: block;
+                  content: "";
+                  width: 2px;
+                  height: 18px;
+                  background: #CDD6E1;
+                  position: absolute;
+                  top: -14%;
+                  left: 50%;
+                  transform: translateX(-50%); }
+                #company .inner .company_list > li > ul > li > ul > li:nth-of-type(1)::before {
+                  display: block;
+                  content: "";
+                  height: 2px;
+                  width: 164px;
+                  background: #CDD6E1;
+                  position: absolute;
+                  top: -14%;
+                  left: 50%; }
+                #company .inner .company_list > li > ul > li > ul > li span {
+                  display: block;
+                  width: 90%;
+                  height: 40px;
+                  line-height: 30px;
+                  margin: 0 auto;
+                  background: #F6F8FA;
+                  border: 1px solid #CDD6E1;
+                  font: 14px/40px 'Noto Sans KR';
+                  color: #005FAC; }
+                  #company .inner .company_list > li > ul > li > ul > li span:nth-of-type(1) {
+                    background: #282b3a;
+                    font: 16px/40px 'Noto Sans KR';
+                    color: #fff; }
+
   #location .inner .map h3 {
     font: 12px/1 'arial';
     color: #cfb6a4; }
@@ -2290,6 +2525,10 @@ input, a, button {
       box-sizing: border-box;
       font: 14px/2 'Nto Sans KR';
       color: #666; } }
+/*
+background:#F6F8FA;
+border: 1px solid #CDD6E1;
+*/
 .news {
   width: 100%; }
   .news .sub_visual {
@@ -2297,7 +2536,7 @@ input, a, button {
   .news > .inner {
     width: 1180px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 0 150px 0;
     box-sizing: border-box; }
     .news > .inner::after {
       display: block;
@@ -2305,7 +2544,7 @@ input, a, button {
       clear: both; }
     .news > .inner #news_tab {
       width: 100%;
-      border: 1px solid #000;
+      border: 1px solid #CDD6E1;
       margin: 100px auto; }
       .news > .inner #news_tab ul {
         width: 100%; }
@@ -2320,16 +2559,16 @@ input, a, button {
             display: block;
             width: 100%;
             height: 40px;
-            background: #666;
+            background: #F6F8FA;
             font: bold 12px/40px 'arial';
-            color: #bbb;
+            color: #666;
             text-align: center; }
           .news > .inner #news_tab ul li.on a {
-            background: #fff;
-            color: #444; }
+            background: #282b3a;
+            color: #fff; }
       .news > .inner #news_tab .group > div {
         width: 100%;
-        height: 200px;
+        height: 300px;
         background: #fff;
         font: bold 20px/200px 'arial';
         color: #444;
