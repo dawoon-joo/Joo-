@@ -1,7 +1,7 @@
 (function($){
     //디폴트 옵션값
     $.defaults = {      
-        count :7
+        count :9
     }
 
     //제이쿼리 객체에 플러그인 등록 코드

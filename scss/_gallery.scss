@@ -7,7 +7,7 @@
 .gallery{
     width: 100%;
     .sub_visual{
-        background: url(../img/bg-sub-visual.gif)no-repeat center/cover;
+        background: url(../img/gallery_bg.jpg)no-repeat center/cover;
     }
 }
 
@@ -194,6 +194,11 @@
         #sns_gallery{
             width: 100%;
             padding: 100px 20px 50px 20px; box-sizing: border-box;
+            h3{
+                text-align: center;
+                margin-bottom: 10px;
+                font:16px/1 'Noto Sans KR'; color: #005FAC;
+            }
             h2{
                 text-align: center;
                 margin-bottom: 50px;

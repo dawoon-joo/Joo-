@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 
-
+/*sub_header------------------------------------------------------------------*/
 #sub_header{
     width: 100%;
     .bgGnb {
@@ -207,7 +207,7 @@
         }
     }
 }
-/*header------------------------------------------------------------------*/
+
 /*sub_page---------------------------------------------------------------*/
 .sub_page{
     width: 100%; 
@@ -216,7 +216,7 @@
         background: #eee;
     }
     .sub_menu{
-        width: 100%; background: #282b3a; 
+        width: 100%; background: #F6F8FA;
         .inner{
             width: 1180px; margin: 0 auto;
             .wrap{
@@ -224,24 +224,27 @@
                 .home{
                     float: left;
                     width: 50px; height: 50px; 
+                    border-left: 1px solid #CDD6E1;
+                    border-right: 1px solid #CDD6E1;
+                    padding:10px 0; box-sizing: border-box;
                     a{
-                        background: url(../img/ico-home.png)no-repeat center;
-                        display: block;  height: 100%;
-                        border-left: 1px solid #bbb;
-                        border-right: 1px solid #bbb;
+                        background:url(../img/icon_home.jpg)no-repeat center/cover;
+                        display: block; width: 30px;  height: 30px;
+                        margin: 0 auto;
+                        
                     }
                 }
                 .sub_menuWeb{
                     &::after{clear: both; content: ""; display: block;}
                     li{
                         float: left;
-                        border-right: 1px solid #bbb;
+                        border-right: 1px solid #CDD6E1;
                         width: 150px; height: 50px;
-                        font:bold 14px/50px 'arial'; color: #fff; 
+                        font:bold 14px/50px 'arial'; color: #282b3a; 
                         padding: 0 30px;
                         text-align: center;
                         a{
-                            font:bold 14px/50px 'arial'; color: #fff;
+                            font:bold 14px/50px 'arial'; color: #282b3a;
                             display: block;
                             
                         }
@@ -250,25 +253,10 @@
             }
         }
     }
-    /*
-    .sub_title{
-        width: 100%; padding-bottom: 50px;
-        .inner{
-            width: 1180px; margin: 0 auto;
-            h1{
-                text-align: center; padding: 70px 0px 50px;
-                font:bold 50px/1 'arial'; color: #222;
-                border-bottom: 1px solid #666;
-            }
-        }
-    }
-    */
 }
 
 
-/*sub_page---------------------------------------------------------------*/
-
-/*community---------------------------------------------------------------*/
+/*sub_footer---------------------------------------------------------------*/
 
 #sub_footer{
     width: 100%; padding:50px 0;
@@ -344,14 +332,6 @@
 
 
 
-
-
-
-
-/*footer------------------------------------------------------------------*/
-
-
-
 /*tablet*/
 @media screen and(max-width:1179px){
 
@@ -397,17 +377,14 @@
                     float: left;
                     width: 50px; height: 50px; 
                     a{
-                        background: url(../img/ico-home.png)no-repeat center;
-                        display: block;  height: 100%;
-                        border-left: 1px solid #bbb;
-                        border-right: 1px solid #bbb;
+                        background: url(../img/icon_home.jpg)no-repeat center/cover;
+                        display: block;
                     }
                 }
                 .sub_menuWeb{
                     li{
-                        width: 80px; 
                         a{
-                            font:bold 14px/50px 'arial'; color: #fff;
+                            font:bold 14px/50px 'arial'; color: #282b3a;
                         }
                     }
                 }
@@ -506,6 +483,7 @@
                 .wrap{
                     .sub_menuWeb{
                         li{
+                            &:nth-of-type(1){display: none;}
                             a{
                                 font:bold 12px/50px 'arial'; color: #fff;
                             }

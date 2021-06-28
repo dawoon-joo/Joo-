@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -28,6 +30,7 @@ input, a, button {
   top: -9999px;
   opacity: 0; }
 
+/*sub_header------------------------------------------------------------------*/
 #sub_header {
   width: 100%; }
   #sub_header .bgGnb {
@@ -229,30 +232,16 @@ input, a, button {
       color: #222;
       display: none; }
 
-/*header------------------------------------------------------------------*/
 /*sub_page---------------------------------------------------------------*/
 .sub_page {
-  width: 100%;
-  /*
-  .sub_title{
-      width: 100%; padding-bottom: 50px;
-      .inner{
-          width: 1180px; margin: 0 auto;
-          h1{
-              text-align: center; padding: 70px 0px 50px;
-              font:bold 50px/1 'arial'; color: #222;
-              border-bottom: 1px solid #666;
-          }
-      }
-  }
-  */ }
+  width: 100%; }
   .sub_page .sub_visual {
     width: 100%;
     height: 300px;
     background: #eee; }
   .sub_page .sub_menu {
     width: 100%;
-    background: #282b3a; }
+    background: #F6F8FA; }
     .sub_page .sub_menu .inner {
       width: 1180px;
       margin: 0 auto; }
@@ -263,33 +252,36 @@ input, a, button {
       .sub_page .sub_menu .inner .wrap .home {
         float: left;
         width: 50px;
-        height: 50px; }
+        height: 50px;
+        border-left: 1px solid #CDD6E1;
+        border-right: 1px solid #CDD6E1;
+        padding: 10px 0;
+        box-sizing: border-box; }
         .sub_page .sub_menu .inner .wrap .home a {
-          background: url(../img/ico-home.png) no-repeat center;
+          background: url(../img/icon_home.jpg) no-repeat center/cover;
           display: block;
-          height: 100%;
-          border-left: 1px solid #bbb;
-          border-right: 1px solid #bbb; }
+          width: 30px;
+          height: 30px;
+          margin: 0 auto; }
       .sub_page .sub_menu .inner .wrap .sub_menuWeb::after {
         clear: both;
         content: "";
         display: block; }
       .sub_page .sub_menu .inner .wrap .sub_menuWeb li {
         float: left;
-        border-right: 1px solid #bbb;
+        border-right: 1px solid #CDD6E1;
         width: 150px;
         height: 50px;
         font: bold 14px/50px 'arial';
-        color: #fff;
+        color: #282b3a;
         padding: 0 30px;
         text-align: center; }
         .sub_page .sub_menu .inner .wrap .sub_menuWeb li a {
           font: bold 14px/50px 'arial';
-          color: #fff;
+          color: #282b3a;
           display: block; }
 
-/*sub_page---------------------------------------------------------------*/
-/*community---------------------------------------------------------------*/
+/*sub_footer---------------------------------------------------------------*/
 #sub_footer {
   width: 100%;
   padding: 50px 0;
@@ -363,7 +355,6 @@ input, a, button {
           font: 14px/1 'arial';
           color: #bbb; }
 
-/*footer------------------------------------------------------------------*/
 /*tablet*/
 @media screen and (max-width: 1179px) {
   /*header------------------------------------------------------------------*/
@@ -407,16 +398,11 @@ input, a, button {
       width: 50px;
       height: 50px; }
       .sub_page .sub_menu .inner .wrap .home a {
-        background: url(../img/ico-home.png) no-repeat center;
-        display: block;
-        height: 100%;
-        border-left: 1px solid #bbb;
-        border-right: 1px solid #bbb; }
-    .sub_page .sub_menu .inner .wrap .sub_menuWeb li {
-      width: 80px; }
-      .sub_page .sub_menu .inner .wrap .sub_menuWeb li a {
-        font: bold 14px/50px 'arial';
-        color: #fff; }
+        background: url(../img/icon_home.jpg) no-repeat center/cover;
+        display: block; }
+    .sub_page .sub_menu .inner .wrap .sub_menuWeb li a {
+      font: bold 14px/50px 'arial';
+      color: #282b3a; }
   .sub_page .sub_title {
     width: 100%;
     padding-bottom: 50px; }
@@ -497,6 +483,8 @@ input, a, button {
           color: #666; } }
 /*mobile*/
 @media screen and (max-width: 539px) {
+  .sub_page .sub_menu .inner .wrap .sub_menuWeb li:nth-of-type(1) {
+    display: none; }
   .sub_page .sub_menu .inner .wrap .sub_menuWeb li a {
     font: bold 12px/50px 'arial';
     color: #fff; }
@@ -565,123 +553,13 @@ input, a, button {
 .youtube {
   width: 100%; }
   .youtube .sub_visual {
-    background: url(../img/youtube-sub_visual.jpg) no-repeat center/cover; }
-
-#tab {
-  width: 100%;
-  padding: 50px;
-  box-sizing: border-box; }
-  #tab .inner {
-    width: 1180px;
-    margin: 0 auto; }
-    #tab .inner .wrap {
-      width: 100%;
-      height: 150px;
-      position: relative; }
-      #tab .inner .wrap > h1 {
-        background: url(../img/logo.png) no-repeat center/contain;
-        width: 200px;
-        height: 50px;
-        position: absolute;
-        top: 35%;
-        left: 0;
-        transform: translateY(-50%); }
-      #tab .inner .wrap ul {
-        position: absolute;
-        height: 100%;
-        right: 0;
-        top: 0;
-        padding: 30px 0;
-        box-sizing: border-box; }
-        #tab .inner .wrap ul li {
-          transition: 0.5s;
-          float: left;
-          width: 300px;
-          height: 100%; }
-          #tab .inner .wrap ul li:nth-of-type(1) a {
-            background: url(../img/imgbox4.jpg) no-repeat center/cover; }
-          #tab .inner .wrap ul li:nth-of-type(2) a {
-            background: url(../img/imgbox5.jpg) no-repeat center/cover; }
-          #tab .inner .wrap ul li:nth-of-type(3) a {
-            background: url(../img/imgbox6.jpg) no-repeat center/cover; }
-          #tab .inner .wrap ul li::after {
-            clear: both;
-            content: "";
-            display: block; }
-          #tab .inner .wrap ul li .imgbox {
-            width: 40%;
-            height: 100px;
-            float: left;
-            text-align: center; }
-            #tab .inner .wrap ul li .imgbox a {
-              display: inline-block;
-              position: relative;
-              width: 80px;
-              height: 80px;
-              border-radius: 50%; }
-              #tab .inner .wrap ul li .imgbox a:hover span {
-                opacity: 1; }
-              #tab .inner .wrap ul li .imgbox a span {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 50px;
-                transform: translate(-50%, -50%);
-                font: 18px/1 'Do Hyeon';
-                color: #fff;
-                display: block;
-                transition: 0.5s;
-                opacity: 0; }
-          #tab .inner .wrap ul li .txtbox {
-            float: right;
-            width: 60%;
-            height: 80px;
-            padding: 10px 0;
-            box-sizing: border-box; }
-            #tab .inner .wrap ul li .txtbox strong {
-              display: block;
-              font: 16px/1 'Do Hyeon';
-              margin-bottom: 5px;
-              color: #444; }
-            #tab .inner .wrap ul li .txtbox p {
-              font: 14px/1.2 'Bebas Neue';
-              color: #888; }
-    #tab .inner > ul {
-      width: 100%; }
-      #tab .inner > ul::after {
-        content: "";
-        clear: both;
-        display: block; }
-      #tab .inner > ul li {
-        float: left;
-        width: calc(100% /3);
-        height: 500px;
-        padding: 100px;
-        box-sizing: border-box; }
-        #tab .inner > ul li:nth-of-type(1) {
-          background: url(../img/tabmodern.jpg) no-repeat center/cover; }
-        #tab .inner > ul li:nth-of-type(2) {
-          background: url(../img/tabantique.jpg) no-repeat center/cover; }
-        #tab .inner > ul li:nth-of-type(3) {
-          background: url(../img/tabnature.jpg) no-repeat center/cover; }
-        #tab .inner > ul li div {
-          background: rgba(0, 0, 0, 0.4);
-          padding: 5px; }
-          #tab .inner > ul li div h2 {
-            font: bold 20px/1 'arial';
-            color: #fff;
-            text-align: center;
-            margin-bottom: 5px; }
-          #tab .inner > ul li div p {
-            font: bold 20px/1 'arial';
-            color: #fff;
-            text-align: center; }
+    background: url(../img/youtube_bg.jpg) no-repeat center/cover; }
 
 #vidGallery {
   transition: 0.5s;
   width: 100%;
   height: 100%;
-  padding-bottom: 100px;
+  padding: 100px 0 150px 0;
   box-sizing: border-box;
   background: #fff; }
   #vidGallery > .inner {
@@ -693,27 +571,39 @@ input, a, button {
       clear: both; }
     #vidGallery > .inner .wrap {
       width: 100%;
-      height: 150px;
+      padding: 0 0 250px 0;
+      box-sizing: border-box;
       position: relative; }
       #vidGallery > .inner .wrap > h1 {
-        background: url(../img/logo.png) no-repeat center/contain;
-        width: 200px;
-        height: 50px;
-        position: absolute;
-        top: 35%;
-        right: 0;
-        transform: translateY(-50%); }
+        font: normal 16px/1 'arial';
+        color: #005FAC;
+        text-align: center;
+        position: relative; }
+        #vidGallery > .inner .wrap > h1::before {
+          content: "";
+          display: block;
+          background: url(../img/logo.png) no-repeat center/contain;
+          width: 200px;
+          height: 50px;
+          margin: 0 auto;
+          position: absolute;
+          bottom: -45px;
+          left: 50%;
+          transform: translateX(-50%); }
       #vidGallery > .inner .wrap ul {
         position: absolute;
-        height: 100%;
+        width: 100%;
         left: 0;
-        top: 0;
+        top: 90px;
         padding: 30px 0;
         box-sizing: border-box; }
+        #vidGallery > .inner .wrap ul::after {
+          content: "";
+          display: block;
+          clear: both; }
         #vidGallery > .inner .wrap ul li {
           float: left;
-          width: 300px;
-          height: 100%; }
+          width: 33.333%; }
           #vidGallery > .inner .wrap ul li:nth-of-type(1) a {
             background: url(../img/imgbox1.jpg) no-repeat center/cover; }
           #vidGallery > .inner .wrap ul li:nth-of-type(2) a {
@@ -760,18 +650,19 @@ input, a, button {
               margin-bottom: 5px;
               color: #444; }
             #vidGallery > .inner .wrap ul li .txtbox p {
-              font: 14px/1.2 'Bebas Neue';
+              font: 12px/1.2 'Noto Sans KR';
               color: #888; }
     #vidGallery > .inner > article {
       transition: 0.5s;
       width: calc(100% / 3 - 30px);
       height: 400px;
-      background: #fff;
+      background: #F6F8FA;
+      border: 1px solid #cdd6e1;
       float: left;
       margin-bottom: 30px;
-      box-shadow: 12px 12px 12px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 12px 12px 12px 10px rgba(205, 214, 225, 0.3);
       overflow: hidden; }
-      #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(5) {
+      #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(5), #vidGallery > .inner > article:nth-of-type(8) {
         margin: 0 45px; }
       #vidGallery > .inner > article .pic {
         display: block;
@@ -791,21 +682,22 @@ input, a, button {
         padding: 20px;
         box-sizing: border-box; }
         #vidGallery > .inner > article .con h2 {
-          font: 20px/1 "Do Hyeon";
-          color: #444;
+          font: bold 20px/1 "Noto Sans KR";
+          color: #333;
           margin-bottom: 10px; }
         #vidGallery > .inner > article .con p {
-          font: 16px/1.3 "Bebas Neue";
+          font: 16px/1.3 "Noto Sans KR";
           color: #888;
           margin-bottom: 15px; }
         #vidGallery > .inner > article .con span {
-          font: 12px/1 'Do Hyeon';
+          font: 12px/1 'Noto Sans KR';
           color: #555; }
         #vidGallery > .inner > article .con .more {
           display: block;
           width: 100px;
           height: 30px;
-          background: #eee;
+          background: #F6F8FA;
+          border: 1px solid #CDD6E1;
           text-align: center;
           border-radius: 5px;
           font: 14px/30px 'arial';
@@ -826,94 +718,67 @@ input, a, button {
               display: block;
               margin-left: 10px; }
               #vidGallery > .inner > article .con .sns li a .fa-instagram-square {
+                color: #282b3a;
                 font-size: 25px; }
               #vidGallery > .inner > article .con .sns li a .fa-twitter-square {
+                color: #282b3a;
                 font-size: 25px; }
               #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
+                color: #282b3a;
                 font-size: 25px; }
 
 @media screen and (max-width: 1179px) {
-  #tab .inner {
-    width: 100%; }
-    #tab .inner .wrap {
-      height: 300px; }
-      #tab .inner .wrap > h1 {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%); }
-      #tab .inner .wrap ul {
-        position: static;
-        height: 100%;
-        padding: 50px 0;
-        box-sizing: border-box; }
-        #tab .inner .wrap ul::after {
-          display: block;
-          clear: both;
-          content: ""; }
-        #tab .inner .wrap ul li {
-          float: none;
-          display: block;
-          width: 100%;
-          height: 100px; }
-          #tab .inner .wrap ul li .imgbox {
-            width: 60px; }
-            #tab .inner .wrap ul li .imgbox a {
-              width: 60px;
-              height: 60px; }
-              #tab .inner .wrap ul li .imgbox a span {
-                text-align: center; }
-          #tab .inner .wrap ul li .txtbox {
-            width: 90%;
-            height: 100px;
-            padding: 10px 0;
-            box-sizing: border-box; }
-            #tab .inner .wrap ul li .txtbox strong {
-              display: block;
-              font: 16px/1 'Do Hyeon';
-              margin-bottom: 5px;
-              color: #444; }
-            #tab .inner .wrap ul li .txtbox p {
-              font: 14px/1.2 'Bebas Neue';
-              color: #888; }
-    #tab .inner > ul {
-      width: 100%; }
-      #tab .inner > ul::after {
-        content: "";
-        clear: both;
-        display: block; }
-      #tab .inner > ul li {
-        width: calc(100%);
-        height: 300px;
-        padding: 0px; }
-        #tab .inner > ul li div {
-          padding: 15px; }
-          #tab .inner > ul li div h2 {
-            font: bold 16px/1 'arial'; }
-          #tab .inner > ul li div p {
-            font: bold 14px/1 'arial'; }
-
   #vidGallery {
     padding: 0 20px 50px; }
     #vidGallery > .inner {
       width: 100%; }
       #vidGallery > .inner .wrap {
         width: 100%;
-        height: 150px;
+        padding: 50px 0;
         position: relative; }
-        #vidGallery > .inner .wrap > h1 {
-          width: 200px;
-          height: 50px;
-          top: 35%;
-          left: 50%;
-          transform: translate(-50%, -50%); }
         #vidGallery > .inner .wrap ul {
-          display: none; }
+          position: static;
+          height: 100%;
+          width: 100%;
+          padding: 80px 0 15px 0;
+          box-sizing: border-box; }
+          #vidGallery > .inner .wrap ul::after {
+            display: block;
+            clear: both;
+            content: ""; }
+          #vidGallery > .inner .wrap ul li {
+            float: none;
+            display: block;
+            width: 100%;
+            height: 100px;
+            text-align: center; }
+            #vidGallery > .inner .wrap ul li .imgbox {
+              width: 100%;
+              height: 80px; }
+              #vidGallery > .inner .wrap ul li .imgbox a {
+                width: 60px;
+                height: 60px; }
+                #vidGallery > .inner .wrap ul li .imgbox a span {
+                  text-align: center; }
+            #vidGallery > .inner .wrap ul li .txtbox {
+              width: 100%;
+              height: 100px;
+              padding: 10px 0;
+              box-sizing: border-box; }
+              #vidGallery > .inner .wrap ul li .txtbox strong {
+                display: block;
+                font: 16px/1 'Do Hyeon';
+                margin-bottom: 5px;
+                color: #444; }
+              #vidGallery > .inner .wrap ul li .txtbox p {
+                font: 12px/1.2 'Noto Sans KR';
+                color: #888; }
       #vidGallery > .inner > article {
         width: calc(100% / 2 - 10px);
         height: 400px;
         float: left;
         margin-right: 20px; }
-        #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(4), #vidGallery > .inner > article:nth-of-type(6) {
+        #vidGallery > .inner > article:nth-of-type(2), #vidGallery > .inner > article:nth-of-type(4), #vidGallery > .inner > article:nth-of-type(6), #vidGallery > .inner > article:nth-of-type(8) {
           margin: 0 0 30px 0; }
         #vidGallery > .inner > article:nth-of-type(5) {
           margin: 0 20px 30px 0; }
@@ -935,11 +800,11 @@ input, a, button {
           padding: 20px;
           box-sizing: border-box; }
           #vidGallery > .inner > article .con h2 {
-            font: 20px/1 "Do Hyeon";
-            color: #444;
+            font: bold 20px/1 "Noto Sans KR";
+            color: #333;
             margin-bottom: 10px; }
           #vidGallery > .inner > article .con p {
-            font: 16px/1.3 "Bebas Neue";
+            font: 16px/1.3 "Noto Sans KR";
             color: #888;
             margin-bottom: 15px; }
           #vidGallery > .inner > article .con span {
@@ -976,68 +841,45 @@ input, a, button {
                 #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
                   font-size: 25px; } }
 @media screen and (max-width: 800px) {
-  #tab .inner .wrap ul {
-    position: static;
-    height: 100%;
-    padding: 50px 0;
-    box-sizing: border-box; }
-    #tab .inner .wrap ul::after {
-      display: block;
-      clear: both;
-      content: ""; }
-    #tab .inner .wrap ul li .imgbox {
-      width: 60px; }
-      #tab .inner .wrap ul li .imgbox a {
-        width: 60px;
-        height: 60px; }
-        #tab .inner .wrap ul li .imgbox a span {
-          text-align: center; }
-    #tab .inner .wrap ul li .txtbox {
-      width: 80%;
-      height: 100px;
-      padding: 10px 0;
-      box-sizing: border-box; }
-      #tab .inner .wrap ul li .txtbox strong {
-        display: block;
-        font: 16px/1 'Do Hyeon';
-        margin-bottom: 5px;
-        color: #444; }
-      #tab .inner .wrap ul li .txtbox p {
-        font: 14px/1.2 'Bebas Neue';
-        color: #888; }
-  #tab .inner > ul {
-    width: 100%; }
-    #tab .inner > ul::after {
-      content: "";
-      clear: both;
-      display: block; }
-    #tab .inner > ul li {
-      width: calc(100%);
-      height: 300px;
-      padding: 0px; }
-      #tab .inner > ul li div {
-        padding: 15px; }
-        #tab .inner > ul li div h2 {
-          font: bold 16px/1 'arial'; }
-        #tab .inner > ul li div p {
-          font: bold 14px/1 'arial'; }
-
   #vidGallery {
     padding: 0 20px 50px; }
     #vidGallery > .inner {
       width: 100%; }
       #vidGallery > .inner .wrap {
         width: 100%;
-        height: 150px;
-        position: relative; }
-        #vidGallery > .inner .wrap > h1 {
-          width: 200px;
-          height: 50px;
-          top: 35%;
-          left: 50%;
-          transform: translate(-50%, -50%); }
+        position: relative;
+        padding: 50px 0 0 0; }
         #vidGallery > .inner .wrap ul {
-          display: none; }
+          position: static;
+          height: 100%;
+          padding: 50px 0;
+          box-sizing: border-box; }
+          #vidGallery > .inner .wrap ul::after {
+            display: block;
+            clear: both;
+            content: ""; }
+          #vidGallery > .inner .wrap ul li {
+            text-align-last: left; }
+            #vidGallery > .inner .wrap ul li .imgbox {
+              width: 60px; }
+              #vidGallery > .inner .wrap ul li .imgbox a {
+                width: 60px;
+                height: 60px; }
+                #vidGallery > .inner .wrap ul li .imgbox a span {
+                  text-align: center; }
+            #vidGallery > .inner .wrap ul li .txtbox {
+              width: 80%;
+              height: 100px;
+              padding: 10px 0;
+              box-sizing: border-box; }
+              #vidGallery > .inner .wrap ul li .txtbox strong {
+                display: block;
+                font: 16px/1 'Do Hyeon';
+                margin-bottom: 5px;
+                color: #444; }
+              #vidGallery > .inner .wrap ul li .txtbox p {
+                font: 12px/1.2 'Noto Sans KR';
+                color: #888; }
       #vidGallery > .inner > article {
         width: calc(100%);
         height: 400px;
@@ -1062,11 +904,11 @@ input, a, button {
           padding: 20px;
           box-sizing: border-box; }
           #vidGallery > .inner > article .con h2 {
-            font: 20px/1 "Do Hyeon";
-            color: #444;
+            font: bold 20px/1 "Noto Sans KR";
+            color: #333;
             margin-bottom: 10px; }
           #vidGallery > .inner > article .con p {
-            font: 16px/1.3 "Bebas Neue";
+            font: 16px/1.3 "Noto Sans KR";
             color: #888;
             margin-bottom: 15px; }
           #vidGallery > .inner > article .con span {
@@ -1103,21 +945,20 @@ input, a, button {
                 #vidGallery > .inner > article .con .sns li a .fa-facebook-square {
                   font-size: 25px; } }
 @media screen and (max-width: 539px) {
-  #tab .inner .wrap ul li .imgbox {
+  #vidGallery > .inner .wrap ul li .imgbox {
     width: 25%; }
-  #tab .inner .wrap ul li .txtbox {
+  #vidGallery > .inner .wrap ul li .txtbox {
     width: 70%; }
-    #tab .inner .wrap ul li .txtbox strong {
+    #vidGallery > .inner .wrap ul li .txtbox strong {
       font: 14px/1 'Do Hyeon'; }
-    #tab .inner .wrap ul li .txtbox p {
-      font: 12px/1.2 'Bebas Neue'; }
-
+    #vidGallery > .inner .wrap ul li .txtbox p {
+      font: 12px/1.2 'Noto Sans KR'; }
   #vidGallery > .inner > article .con h2 {
-    font: 18px/1 "Do Hyeon";
+    font: 18px/1 "Noto Sans KR";
     color: #444;
     margin-bottom: 10px; }
   #vidGallery > .inner > article .con p {
-    font: 14px/1.3 "Bebas Neue";
+    font: 14px/1.3 "Noto Sans KR";
     color: #888;
     margin-bottom: 15px; }
   #vidGallery > .inner > article .con span {
@@ -1126,7 +967,7 @@ input, a, button {
 .gallery {
   width: 100%; }
   .gallery .sub_visual {
-    background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
+    background: url(../img/gallery_bg.jpg) no-repeat center/cover; }
 
 .loading {
   position: fixed;
@@ -1283,6 +1124,11 @@ input, a, button {
       width: 100%;
       padding: 100px 20px 50px 20px;
       box-sizing: border-box; }
+      .content .inner #sns_gallery h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        font: 16px/1 'Noto Sans KR';
+        color: #005FAC; }
       .content .inner #sns_gallery h2 {
         text-align: center;
         margin-bottom: 50px;
@@ -1472,7 +1318,157 @@ input, a, button {
 .location {
   width: 100%; }
   .location .sub_visual {
-    background: url(../img/locationbg.jpg) no-repeat center/cover; }
+    background: url(../img/location_bg.jpg) no-repeat center/cover; }
+
+#company {
+  width: 100%;
+  padding: 100px 0;
+  box-sizing: border-box; }
+  #company .inner {
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center; }
+    #company .inner h3 {
+      font: 16px/1 'arial';
+      color: #005FAC;
+      margin-bottom: 10px; }
+    #company .inner h2 {
+      font: bold 24px/1 'Noto Sans KR';
+      color: #444;
+      margin-bottom: 50px; }
+    #company .inner .company_list {
+      width: 100%; }
+      #company .inner .company_list > li > span {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        line-height: 100px;
+        background: #F6F8FA;
+        border: 1px solid #CDD6E1;
+        font: 18px/100px 'Noto Sans KR';
+        color: #005FAC; }
+      #company .inner .company_list > li > ul {
+        margin-top: 100px; }
+        #company .inner .company_list > li > ul::after {
+          clear: both;
+          display: block;
+          content: ""; }
+        #company .inner .company_list > li > ul > li {
+          float: left;
+          width: 33.333%; }
+          #company .inner .company_list > li > ul > li:nth-of-type(2) .cmy_pic::after {
+            display: block;
+            content: "";
+            width: 2px;
+            height: 71px;
+            background: #CDD6E1;
+            position: absolute;
+            top: -119%;
+            left: 50%;
+            transform: translateX(-50%); }
+          #company .inner .company_list > li > ul > li:nth-of-type(1) .cmy_pic::before {
+            display: block;
+            content: "";
+            width: 786px;
+            height: 2px;
+            background: #CDD6E1;
+            position: absolute;
+            top: -34%;
+            left: 50%; }
+          #company .inner .company_list > li > ul > li > div {
+            width: 150px;
+            height: 80px;
+            margin: 0 auto;
+            background: #F6F8FA;
+            border: 1px solid #CDD6E1;
+            font: 16px/100px 'Noto Sans KR';
+            color: #005FAC;
+            line-height: 90px;
+            position: relative; }
+            #company .inner .company_list > li > ul > li > div::before {
+              display: block;
+              content: "";
+              width: 2px;
+              height: 51px;
+              position: absolute;
+              bottom: -66%;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #CDD6E1; }
+            #company .inner .company_list > li > ul > li > div .cmy_pic {
+              position: absolute;
+              width: 60px;
+              height: 60px;
+              top: 0%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: #005FAC;
+              border-radius: 50%; }
+              #company .inner .company_list > li > ul > li > div .cmy_pic::after {
+                display: block;
+                content: "";
+                width: 2px;
+                height: 20px;
+                background: #CDD6E1;
+                position: absolute;
+                top: -25%;
+                left: 50%;
+                transform: translate(-50%, -25%); }
+              #company .inner .company_list > li > ul > li > div .cmy_pic .fa-prescription-bottle,
+              #company .inner .company_list > li > ul > li > div .cmy_pic .fa-briefcase,
+              #company .inner .company_list > li > ul > li > div .cmy_pic .fa-file-alt {
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 30px; }
+          #company .inner .company_list > li > ul > li > ul {
+            margin-top: 80px;
+            width: 100%; }
+            #company .inner .company_list > li > ul > li > ul::after {
+              clear: both;
+              content: "";
+              display: block; }
+            #company .inner .company_list > li > ul > li > ul > li {
+              position: relative;
+              float: left;
+              width: 49.999%; }
+              #company .inner .company_list > li > ul > li > ul > li::after {
+                display: block;
+                content: "";
+                width: 2px;
+                height: 31px;
+                background: #CDD6E1;
+                position: absolute;
+                top: -25%;
+                left: 50%;
+                transform: translateX(-50%); }
+              #company .inner .company_list > li > ul > li > ul > li:nth-of-type(1)::before {
+                display: block;
+                content: "";
+                height: 2px;
+                width: 196px;
+                background: #CDD6E1;
+                position: absolute;
+                top: -25%;
+                left: 50%; }
+              #company .inner .company_list > li > ul > li > ul > li span {
+                display: block;
+                width: 90%;
+                height: 40px;
+                line-height: 30px;
+                margin: 0 auto;
+                background: #F6F8FA;
+                border: 1px solid #CDD6E1;
+                font: 14px/40px 'Noto Sans KR';
+                color: #005FAC; }
+                #company .inner .company_list > li > ul > li > ul > li span:nth-of-type(1) {
+                  background: #282b3a;
+                  font: 16px/40px 'Noto Sans KR';
+                  color: #fff; }
 
 #location {
   width: 100%;
@@ -1668,7 +1664,7 @@ input, a, button {
       width: 100%; }
       #location .inner .map h3 {
         font: 14px/1 'arial';
-        color: #cfb6a4; }
+        color: #005FAC; }
       #location .inner .map h2 {
         font: bold 22px/1 'Noto Sans KR';
         color: #444; }
@@ -1812,7 +1808,7 @@ input, a, button {
 .members {
   width: 100%; }
   .members .sub_visual {
-    background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
+    background: url(../img/members_bg.jpg) no-repeat center/cover; }
 
 #members {
   width: 100%;
@@ -2297,7 +2293,7 @@ input, a, button {
 .news {
   width: 100%; }
   .news .sub_visual {
-    background: url(../img/bg-sub-visual.gif) no-repeat center/cover; }
+    background: url(../img/news_bg.jpg) no-repeat center/cover; }
   .news > .inner {
     width: 1180px;
     margin: 0 auto;
@@ -2307,24 +2303,62 @@ input, a, button {
       display: block;
       content: "";
       clear: both; }
+    .news > .inner #news_tab {
+      width: 100%;
+      border: 1px solid #000;
+      margin: 100px auto; }
+      .news > .inner #news_tab ul {
+        width: 100%; }
+        .news > .inner #news_tab ul::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .news > .inner #news_tab ul li {
+          width: 33.333%;
+          float: left; }
+          .news > .inner #news_tab ul li a {
+            display: block;
+            width: 100%;
+            height: 40px;
+            background: #666;
+            font: bold 12px/40px 'arial';
+            color: #bbb;
+            text-align: center; }
+          .news > .inner #news_tab ul li.on a {
+            background: #fff;
+            color: #444; }
+      .news > .inner #news_tab .group > div {
+        width: 100%;
+        height: 200px;
+        background: #fff;
+        font: bold 20px/200px 'arial';
+        color: #444;
+        text-align: center;
+        display: none; }
+        .news > .inner #news_tab .group > div.on {
+          display: block; }
     .news > .inner fieldset {
       float: right;
       margin-bottom: 20px; }
       .news > .inner fieldset select {
         width: 80px;
-        padding: 10px 5px; }
+        padding: 10px 5px;
+        background: #F6F8FA;
+        border: 1px solid #CDD6E1; }
       .news > .inner fieldset input[type=text] {
         width: 250px;
-        padding: 10px 5px; }
+        padding: 10px 5px;
+        background: #F6F8FA;
+        border: 1px solid #CDD6E1; }
       .news > .inner fieldset input[type=button] {
         width: 50px;
         padding: 10px 5px;
         border-color: black;
         text-indent: -9999px;
-        background: black url(../img/btn-search.png) no-repeat center; }
+        background: #282b3a url(../img/btn-search.png) no-repeat center; }
     .news > .inner table {
       width: 100%;
-      border-top: 2px solid #000;
+      border-top: 2px solid #CDD6E1;
       margin-bottom: 30px; }
       .news > .inner table caption {
         position: absolute;
@@ -2333,8 +2367,8 @@ input, a, button {
         opacity: 0; }
       .news > .inner table thead tr {
         width: 100%;
-        background: #eee;
-        font: bold 20px/1 'arial';
+        background: #F6F8FA;
+        font: bold 18px/1 'Noto Sans KR';
         color: #333; }
         .news > .inner table thead tr th {
           padding: 15px 10px; }
@@ -2351,9 +2385,9 @@ input, a, button {
       .news > .inner table tbody tr {
         width: 100%;
         text-align: center;
-        font: normal 12px/1 'arial';
+        font: normal 12px/1 'Noto Sans KR';
         color: #444;
-        border-bottom: 1px solid #bbb; }
+        border-bottom: 1px solid #CDD6E1; }
         .news > .inner table tbody tr td:nth-of-type(2) {
           text-align: left; }
         .news > .inner table tbody tr td:nth-of-type(3) a {
@@ -2363,10 +2397,10 @@ input, a, button {
           height: 21px;
           margin: 0 auto; }
         .news > .inner table tbody tr:hover {
-          background: rgba(169, 235, 226, 0.4); }
+          background: rgba(205, 214, 225, 0.4); }
         .news > .inner table tbody tr span {
           display: inline-block;
-          background: #d46215;
+          background: #282b3a;
           font-size: 11px;
           color: #fff;
           padding: 3px;
@@ -2390,10 +2424,10 @@ input, a, button {
           font: 14px/1 'arial';
           color: #333; }
           .news > .inner .pagination .numbers a.on {
-            color: #d46215;
-            border-bottom: 2px solid #d46215; }
+            color: #444;
+            border-bottom: 2px solid #CDD6E1; }
           .news > .inner .pagination .numbers a:hover {
-            color: #d46215; }
+            color: #CDD6E1; }
       .news > .inner .pagination > .next {
         background: url(../img/btn-next-page.png) no-repeat center;
         width: 20px;
@@ -2439,14 +2473,14 @@ input, a, button {
     .news > .inner table tbody tr {
       font: normal 14px/1 'arial';
       color: #444;
-      border-bottom: 1px solid #bbb; }
+      border-bottom: 1px solid #CDD6E1; }
       .news > .inner table tbody tr td:nth-of-type(5) {
         display: none; }
       .news > .inner table tbody tr td:nth-of-type(2) {
         text-align: left; }
       .news > .inner table tbody tr span {
         display: inline-block;
-        background: #d46215;
+        background: #282b3a;
         font-size: 10px;
         color: #fff;
         padding: 3px;

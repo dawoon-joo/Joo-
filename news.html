@@ -10,6 +10,14 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script defer src="js/sub_layout.js"></script>
+    <script defer src="js/news.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#news_tab").myTab({
+                active_class:"on"
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="sub_header">
@@ -269,12 +277,21 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="sub_title">
-            <div class="inner">
-                <h1>NEWS</h1>
-            </div>
-        </div> -->
         <div class="inner">
+
+            <div id="news_tab">
+                <ul>
+                    <li class="on"><a href="#">button1</a></li>
+                    <li><a href="#">button2</a></li>
+                    <li><a href="#">button3</a></li>
+                </ul>
+                <div class="group">
+                    <div class="on">box1</div>
+                    <div>box2</div>
+                    <div>box3</div>
+                </div>
+            </div>
+
             <fieldset>
                 <legend class="h">게시판 검색박스</legend>
                 <select name="search_type" id="search_type">
@@ -452,6 +469,7 @@
             </div>
         </div>
     </section>
+
 
 
 
