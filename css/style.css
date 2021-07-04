@@ -1709,7 +1709,7 @@ input, a, button {
             #company .inner .company_list > li > ul > li:nth-of-type(1) .cmy_pic::before {
               display: block;
               content: "";
-              width: 786px;
+              width: 65.8vw;
               height: 2px;
               background: #CDD6E1;
               position: absolute;
@@ -1788,7 +1788,7 @@ input, a, button {
                   display: block;
                   content: "";
                   height: 2px;
-                  width: 196px;
+                  width: 16.5vw;
                   background: #CDD6E1;
                   position: absolute;
                   top: -25%;
@@ -1951,7 +1951,7 @@ input, a, button {
                   display: block;
                   content: "";
                   height: 2px;
-                  width: 164px;
+                  width: 48.5vw;
                   background: #CDD6E1;
                   position: absolute;
                   top: -14%;
@@ -2553,7 +2553,7 @@ border: 1px solid #CDD6E1;
           display: block;
           clear: both; }
         .news > .inner #news_tab ul li {
-          width: 33.333%;
+          width: 49.999%;
           float: left; }
           .news > .inner #news_tab ul li a {
             display: block;
@@ -2570,12 +2570,81 @@ border: 1px solid #CDD6E1;
         width: 100%;
         height: 300px;
         background: #fff;
-        font: bold 20px/200px 'arial';
         color: #444;
         text-align: center;
         display: none; }
         .news > .inner #news_tab .group > div.on {
           display: block; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .left_box {
+          float: left;
+          width: 30%;
+          height: 100%;
+          padding: 80px 30px 30px 80px;
+          box-sizing: border-box;
+          text-align-last: left; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2 {
+            font: bold 24px/1.1 'Noto Sans KR';
+            color: #005FAC;
+            margin-bottom: 5px;
+            position: relative; }
+            .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2::before {
+              content: "";
+              display: block;
+              height: 5px;
+              width: 50px;
+              background: #005FAC;
+              position: absolute;
+              top: -20px;
+              left: 0; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h3 {
+            font: bold 30px/1.2 'Noto Sans KR';
+            color: #333; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .right_box {
+          float: right;
+          width: 70%;
+          height: 100%;
+          padding: 50px 0 20px;
+          text-align: left; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .right_box > h2 {
+            font: bold 22px/1.1 'Noto Sans KR';
+            color: #333;
+            margin-bottom: 15px; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .right_box p {
+            font: normal 16px/1.3 'Noto Sans KR';
+            color: #777; }
+        .news > .inner #news_tab .group > div:nth-of-type(2) ul {
+          width: 100%;
+          height: 100%;
+          padding: 20px 0;
+          box-sizing: border-box; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul::after {
+            clear: both;
+            display: block;
+            content: ""; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li {
+            float: left;
+            width: 29.333%;
+            height: 100%;
+            margin-right: 2%;
+            margin-left: 2%;
+            background: #F6F8FA;
+            border: 1px solid #CDD6E1;
+            text-align: center;
+            padding: 40px 25px;
+            box-sizing: border-box; }
+            .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-anchor,
+            .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-apple,
+            .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-archive {
+              font-size: 50px;
+              color: #005FAC;
+              margin-bottom: 10px; }
+            .news > .inner #news_tab .group > div:nth-of-type(2) ul li > h2 {
+              font: bold 20px/1 'Noto Sans KR';
+              color: #333;
+              margin-bottom: 10px; }
+            .news > .inner #news_tab .group > div:nth-of-type(2) ul li > p {
+              font: 16px/1.4 'Noto Sans KR';
+              color: #666; }
     .news > .inner fieldset {
       float: right;
       margin-bottom: 20px; }
@@ -2682,6 +2751,81 @@ border: 1px solid #CDD6E1;
   .news > .inner {
     width: 100%;
     padding: 0 20px 50px; }
+    .news > .inner #news_tab .group > div {
+      height: 300px; }
+      .news > .inner #news_tab .group > div:nth-of-type(1) .left_box {
+        float: left;
+        width: 100%;
+        height: 100px;
+        padding: 50px 30px 0;
+        text-align-last: center; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2 {
+          font: bold 16px/1.1 'Noto Sans KR';
+          color: #005FAC; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2 br {
+            display: none; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2::before {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 30px;
+            background: #005FAC;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%); }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h3 {
+          font: bold 16px/1.2 'Noto Sans KR';
+          color: #333; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h3 br {
+            display: none; }
+      .news > .inner #news_tab .group > div:nth-of-type(1) .right_box {
+        float: right;
+        width: 100%;
+        height: 200px;
+        padding: 10px 20px 0;
+        text-align: left; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .right_box > h2 {
+          font: bold 14px/1.2 'Noto Sans KR';
+          color: #333;
+          margin-bottom: 15px; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .right_box p {
+          display: block;
+          font: normal 12px/1.4 'Noto Sans KR';
+          color: #777; }
+      .news > .inner #news_tab .group > div:nth-of-type(2) ul {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+        box-sizing: border-box; }
+        .news > .inner #news_tab .group > div:nth-of-type(2) ul::after {
+          clear: both;
+          display: block;
+          content: ""; }
+        .news > .inner #news_tab .group > div:nth-of-type(2) ul li {
+          float: left;
+          width: 29.333%;
+          height: 100%;
+          margin-right: 2%;
+          margin-left: 2%;
+          background: #F6F8FA;
+          border: 1px solid #CDD6E1;
+          text-align: center;
+          padding: 40px 25px;
+          box-sizing: border-box; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-anchor,
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-apple,
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-archive {
+            font-size: 30px;
+            color: #005FAC;
+            margin-bottom: 10px; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li > h2 {
+            font: bold 14px/1 'Noto Sans KR';
+            color: #333;
+            margin-bottom: 10px; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li > p {
+            font: 12px/1.4 'Noto Sans KR';
+            color: #666; }
     .news > .inner fieldset {
       float: right;
       margin-bottom: 20px; }
@@ -2737,6 +2881,80 @@ border: 1px solid #CDD6E1;
 @media screen and (max-width: 539px) {
   .news > .inner {
     padding: 0 0 50px; }
+    .news > .inner #news_tab .group > div {
+      height: 400px; }
+      .news > .inner #news_tab .group > div:nth-of-type(1) .left_box {
+        float: left;
+        width: 100%;
+        height: 100px;
+        padding: 50px 30px 0;
+        text-align-last: center; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2 {
+          font: bold 16px/1.1 'Noto Sans KR';
+          color: #005FAC; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2 br {
+            display: none; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h2::before {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 30px;
+            background: #005FAC;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%); }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h3 {
+          font: bold 16px/1.2 'Noto Sans KR';
+          color: #333; }
+          .news > .inner #news_tab .group > div:nth-of-type(1) .left_box > h3 br {
+            display: none; }
+      .news > .inner #news_tab .group > div:nth-of-type(1) .right_box {
+        float: right;
+        width: 100%;
+        height: 300px;
+        padding: 10px 20px 0;
+        text-align: left; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .right_box > h2 {
+          font: bold 14px/1.2 'Noto Sans KR';
+          color: #333;
+          margin-bottom: 15px; }
+        .news > .inner #news_tab .group > div:nth-of-type(1) .right_box p {
+          display: block;
+          font: normal 12px/1.4 'Noto Sans KR';
+          color: #777; }
+      .news > .inner #news_tab .group > div:nth-of-type(2) ul {
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px;
+        box-sizing: border-box; }
+        .news > .inner #news_tab .group > div:nth-of-type(2) ul::after {
+          clear: both;
+          display: block;
+          content: ""; }
+        .news > .inner #news_tab .group > div:nth-of-type(2) ul li {
+          width: 100%;
+          height: 30%;
+          margin-right: 0;
+          margin-left: 0;
+          margin-bottom: 5%;
+          padding: 10px 10px;
+          box-sizing: border-box; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li:last-of-type {
+            margin-bottom: 0; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-anchor,
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-apple,
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li .fa-archive {
+            font-size: 20px;
+            color: #005FAC;
+            margin-bottom: 5px; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li > h2 {
+            font: bold 14px/1 'Noto Sans KR';
+            color: #333;
+            margin-bottom: 5px; }
+          .news > .inner #news_tab .group > div:nth-of-type(2) ul li > p {
+            font: 12px/1.4 'Noto Sans KR';
+            color: #666; }
     .news > .inner fieldset {
       float: none;
       text-align: center; }
@@ -2963,10 +3181,65 @@ border: 1px solid #CDD6E1;
 /*figure*----------------------*/
 #visual {
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 100px);
   background: #eee;
-  padding: 100px;
-  box-sizing: border-box; }
+  position: relative;
+  overflow-x: hidden; }
+  #visual::before {
+    content: "";
+    display: block;
+    background: lightblue;
+    width: 90vw;
+    height: calc(100% - 10vw);
+    position: absolute;
+    left: 5vw;
+    top: 5vw; }
+  #visual section {
+    width: 90vw;
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    border: 1px solid blue; }
+    #visual section ul {
+      width: 160%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-left: -40%; }
+      #visual section ul li {
+        width: 12.5%;
+        height: 20vh;
+        border: 1px solid red;
+        float: left;
+        position: relative;
+        transform-origin: right bottom;
+        transition: 0.5s; }
+        #visual section ul li.on {
+          transform: scale(1.5); }
+        #visual section ul li .pic {
+          background: url(../img/gallery_bg.jpg) no-repeat center/cover;
+          width: 100%;
+          height: 100%;
+          transform-origin: right top;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+        #visual section ul li > h2 {
+          position: absolute;
+          left: 20%;
+          bottom: 20%; }
+        #visual section ul li > p {
+          position: absolute;
+          left: 20%;
+          bottom: 10%; }
+  #visual .btnPrev {
+    position: absolute;
+    top: 15vh;
+    right: 15vw; }
+  #visual .btnNext {
+    position: absolute;
+    top: 15vh;
+    right: 10vw; }
 
 #main {
   width: 100%;

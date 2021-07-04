@@ -28,7 +28,7 @@ border: 1px solid #CDD6E1;
                     content:''; display:block; clear:both; 
                 }
                 li{
-                    width: 33.333%;
+                    width: 49.999%;
                     float:left; 
                     a{
                         display:block; 
@@ -50,12 +50,79 @@ border: 1px solid #CDD6E1;
                 width:100%; 
                 height:300px; 
                 background:#fff; 
-                font:bold 20px/200px 'arial'; 
                 color:#444; 
                 text-align:center; 
                 display:none; 
-        
                 &.on{ display:block; }
+                
+                &:nth-of-type(1){
+                    .left_box{
+                        float: left; width: 30%; height: 100%;
+                        padding:80px 30px 30px 80px; box-sizing: border-box;
+                        text-align-last: left;
+    
+                        >h2{
+                            font:bold 24px/1.1 'Noto Sans KR'; color: #005FAC;
+                            margin-bottom: 5px;
+                            position: relative;
+                            
+                            &::before{
+                                content: ""; display: block;
+                                height: 5px; width: 50px;
+                                background: #005FAC;
+                                position: absolute; top: -20px; left: 0;
+                            }
+                        }
+                        >h3{
+                            font:bold 30px/1.2 'Noto Sans KR'; color: #333;
+                        }
+                    }
+                    .right_box{
+                        float: right; width: 70%; height: 100%;
+                        padding: 50px 0 20px;
+                        text-align: left;
+    
+                        >h2{
+                            font:bold 22px/1.1 'Noto Sans KR'; color: #333;
+                            margin-bottom: 15px;
+                        }
+                        p{
+                            font:normal 16px/1.3 'Noto Sans KR'; color: #777;
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    ul{
+                        width: 100%; height: 100%;
+                        padding: 20px 0; box-sizing: border-box;
+                        &::after{clear: both; display: block; content: "";}
+
+                        li{
+                            float: left; width: 29.333%; height: 100%;
+                            margin-right: 2%; margin-left: 2%;
+                            background:#F6F8FA; 
+                            border:1px solid #CDD6E1;
+                            text-align: center;
+                            padding:40px 25px; box-sizing: border-box;
+
+                            .fa-anchor,
+                            .fa-apple,
+                            .fa-archive{
+                                font-size: 50px;
+                                color: #005FAC;
+                                margin-bottom: 10px;
+                            }
+
+                            >h2{
+                                font:bold 20px/1 'Noto Sans KR'; color: #333;
+                                margin-bottom: 10px;
+                            }
+                            >p{
+                                font: 16px/1.4 'Noto Sans KR'; color: #666;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -173,6 +240,87 @@ border: 1px solid #CDD6E1;
     .news{
         >.inner{
             width: 100%; padding: 0 20px 50px; 
+
+            #news_tab{            
+                .group >div{
+                    height:300px; 
+                    &:nth-of-type(1){
+                        .left_box{
+                            float: left; width: 100%; height: 100px;
+                            padding:50px 30px 0;
+                            text-align-last: center;
+        
+                            >h2{
+                                font:bold 16px/1.1 'Noto Sans KR'; color: #005FAC;
+                                & br{
+                                    display: none;
+                                }
+                                &::before{
+                                    content: ""; display: block;
+                                    height: 3px; width: 30px;
+                                    background: #005FAC;
+                                    position: absolute; top: -10px; left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            >h3{
+                                font:bold 16px/1.2 'Noto Sans KR'; color: #333;
+                                & br{
+                                    display: none;
+                                }
+                            }
+                        }
+                        .right_box{
+                            float: right; width: 100%; height: 200px;
+                            padding:10px 20px 0;
+                            text-align: left;
+        
+                            >h2{
+                                font:bold 14px/1.2 'Noto Sans KR'; color: #333;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                display: block;
+                                font:normal 12px/1.4 'Noto Sans KR'; color: #777;
+                                
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        ul{
+                            width: 100%; height: 100%;
+                            padding: 20px 0; box-sizing: border-box;
+                            &::after{clear: both; display: block; content: "";}
+    
+                            li{
+                                float: left; width: 29.333%; height: 100%;
+                                margin-right: 2%; margin-left: 2%;
+                                background:#F6F8FA; 
+                                border:1px solid #CDD6E1;
+                                text-align: center;
+                                padding:40px 25px; box-sizing: border-box;
+    
+                                .fa-anchor,
+                                .fa-apple,
+                                .fa-archive{
+                                    font-size: 30px;
+                                    color: #005FAC;
+                                    margin-bottom: 10px;
+                                }
+    
+                                >h2{
+                                    font:bold 14px/1 'Noto Sans KR'; color: #333;
+                                    margin-bottom: 10px;
+                                }
+                                >p{
+                                    font: 12px/1.4 'Noto Sans KR'; color: #666;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             fieldset{
                 float: right; margin-bottom: 20px;
                 select{
@@ -243,6 +391,87 @@ border: 1px solid #CDD6E1;
     .news{
         >.inner{
                 padding: 0 0 50px; 
+
+                #news_tab{            
+                    .group >div{
+                        height:400px; 
+                        &:nth-of-type(1){
+                            .left_box{
+                                float: left; width: 100%; height: 100px;
+                                padding:50px 30px 0;
+                                text-align-last: center;
+            
+                                >h2{
+                                    font:bold 16px/1.1 'Noto Sans KR'; color: #005FAC;
+                                    & br{
+                                        display: none;
+                                    }
+                                    &::before{
+                                        content: ""; display: block;
+                                        height: 3px; width: 30px;
+                                        background: #005FAC;
+                                        position: absolute; top: -10px; left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                                >h3{
+                                    font:bold 16px/1.2 'Noto Sans KR'; color: #333;
+                                    & br{
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .right_box{
+                                float: right; width: 100%; height: 300px;
+                                padding:10px 20px 0;
+                                text-align: left;
+            
+                                >h2{
+                                    font:bold 14px/1.2 'Noto Sans KR'; color: #333;
+                                    margin-bottom: 15px;
+                                }
+                                p{
+                                    display: block;
+                                    font:normal 12px/1.4 'Noto Sans KR'; color: #777;
+                                    
+                                }
+                            }
+                        }
+                        &:nth-of-type(2){
+                            ul{
+                                width: 100%; height: 100%;
+                                padding: 20px 20px; box-sizing: border-box;
+                                &::after{clear: both; display: block; content: "";}
+        
+                                li{
+                                    width: 100%; height: 30%;
+                                    margin-right: 0; margin-left: 0;
+                                    margin-bottom: 5%;
+                                    padding:10px 10px; box-sizing: border-box;
+                                    &:last-of-type{
+                                        margin-bottom: 0;
+                                    }
+                                    .fa-anchor,
+                                    .fa-apple,
+                                    .fa-archive{
+                                        font-size: 20px;
+                                        color: #005FAC;
+                                        margin-bottom: 5px;
+                                    }
+        
+                                    >h2{
+                                        font:bold 14px/1 'Noto Sans KR'; color: #333;
+                                        margin-bottom: 5px;
+                                    }
+                                    >p{
+                                        font: 12px/1.4 'Noto Sans KR'; color: #666;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 fieldset{
                     float: none; text-align: center;
                 }

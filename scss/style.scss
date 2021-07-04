@@ -218,8 +218,66 @@
 }
 /*figure*----------------------*/
 #visual{
-    width: 100%; height: 500px; background:#eee;
-    padding: 100px; box-sizing: border-box;
+    width: 100%; height:calc(100vh - 100px);
+    background: #eee;
+    position: relative;
+    overflow-x: hidden;
+
+    &::before{
+        content: ""; display: block;
+        background: lightblue;
+        width: 90vw; height: calc(100% - 10vw);
+        position: absolute; left: 5vw; top: 5vw;
+    }
+
+    section{
+        width: 90vw;
+        position: absolute; bottom: 5vw; left: 5vw;
+        border: 1px solid blue;
+
+        ul{
+            width: 160%;
+            position: absolute; bottom: 0; left: 0;
+            margin-left: -40%;
+
+            li{
+                width: 12.5%; height: 20vh;
+                border: 1px solid red;
+                float: left;
+                position: relative;
+                transform-origin: right bottom;
+                transition: 0.5s;
+                
+                &.on{
+                    transform: scale(1.5);
+                }
+
+                .pic{
+                    background: url(../img/gallery_bg.jpg)no-repeat center/cover;
+                    width: 100%; height: 100%;
+                    transform-origin: right top;
+                    position: absolute; bottom: 0; left: 0;
+                }
+                >h2{
+                    position: absolute;
+                    left: 20%; bottom: 20%;
+                }
+                >p{
+                    position: absolute;
+                    left: 20%; bottom: 10%;
+                    
+                }
+
+            }
+        }
+    }
+    
+    .btnPrev{
+        position: absolute; top: 15vh; right: 15vw;
+    }
+    .btnNext{
+        position: absolute; top: 15vh; right: 10vw;
+    }
     
 }
 #main{
