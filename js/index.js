@@ -23,3 +23,5 @@ prev.on("click", function(e){
         list.css({marginLeft: "-40%"});
     });
 });
+
+
