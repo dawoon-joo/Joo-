@@ -3203,33 +3203,33 @@ border: 1px solid #CDD6E1;
     background: #f6f8fa;
     border: 1px solid #CDD6E1; }
     #visual section.text_box article {
-      width: 100%;
+      width: 80%;
       position: absolute;
-      left: 50%;
+      right: 0;
       top: 40%;
-      transform: translate(-50%, -50%); }
+      transform: translateY(-50%); }
       #visual section.text_box article::after {
         clear: both;
         display: block;
         content: ""; }
-      #visual section.text_box article .left_box {
+      #visual section.text_box article > .left_box {
         float: left;
-        width: 50%;
-        padding: 200px 0 0 335px;
+        width: 35%;
+        padding: 200px 0 0 20px;
         box-sizing: border-box; }
-        #visual section.text_box article .left_box h2 {
+        #visual section.text_box article > .left_box > .txt h2 {
           font: bold 30px/1 'Noto Sans KR';
           color: #005FAC;
           margin-bottom: 20px; }
-        #visual section.text_box article .left_box h3 {
+        #visual section.text_box article > .left_box > .txt h3 {
           font: bold 32px/1.2 'Noto Sans KR';
           color: #333; }
-      #visual section.text_box article .right_box {
+      #visual section.text_box article > .right_box {
         float: right;
-        width: 50%;
-        padding: 200px 50px 0 20px;
+        width: 65%;
+        padding: 200px 50px 0 0px;
         box-sizing: border-box; }
-        #visual section.text_box article .right_box p {
+        #visual section.text_box article > .right_box p {
           font: 16px/1.8 'arial';
           color: #666; }
   #visual section.img_box {

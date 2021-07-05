@@ -236,28 +236,32 @@
         border: 1px solid #CDD6E1;
 
         article{
-            width: 100%;
-            position: absolute; left: 50%; top:40%;
-            transform: translate(-50%, -50%);
+            width: 80%;
+            position: absolute;
+            right: 0;
+            top: 40%;
+            transform: translateY(-50%);
             &::after{clear: both; display: block; content: "";}
 
-            .left_box{
+            >.left_box{
                 float: left;
-                width: 50%;
-                padding: 200px 0 0 335px; box-sizing: border-box;
+                width: 35%;
+                padding: 200px 0 0 20px; box-sizing: border-box;
 
-                h2{
-                    font: bold 30px/1 'Noto Sans KR'; color: #005FAC;
-                    margin-bottom: 20px;
-                }
-                h3{
-                    font: bold 32px/1.2 'Noto Sans KR'; color: #333;
+                >.txt{
+                    h2{
+                        font: bold 30px/1 'Noto Sans KR'; color: #005FAC;
+                        margin-bottom: 20px;
+                    }
+                    h3{
+                        font: bold 32px/1.2 'Noto Sans KR'; color: #333;
+                    }
                 }
             }
-            .right_box{
+            >.right_box{
                 float: right;
-                width: 50%;
-                padding: 200px 50px 0 20px; box-sizing: border-box;
+                width: 65%;
+                padding: 200px 50px 0 0px; box-sizing: border-box;
 
                 p{
                     font:16px/1.8 'arial'; color: #666;
