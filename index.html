@@ -10,8 +10,16 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script defer src="js/custom.js"></script>
-    <script defer src="js/index.js"></script>
-    <script defer src="js/slide.js"></script>
+    <script defer src="js/main/index.js"></script>
+    <script defer src="js/main/tab.js"></script>
+    <script defer src="js/main/panel.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tab").myTab({
+                active_class:"on"
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="header">
@@ -254,53 +262,6 @@
         </div>
     </header>
 
-    <section id="main">
-        <div class="inner">
-            <article class="txt_box">
-                <h2>
-                    Clearview
-                    <br>
-                    Chalet
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur repudiandae aliquid obcaecati quae sed? Necessitatibus earum veritatis similique, quam natus dicta ipsum doloribus! Sunt quam id dolore eum. Iure, quasi.
-                </p>
-            </article>
-            <article id="slider">
-                <ul class="list1">
-                    <li data-index="1"></li>
-                    <li data-index="2"></li>
-                    <li data-index="3"></li>
-                    <li data-index="4"></li>
-                </ul>
-        
-                <a href="#" class="prev">prev</a>
-                <a href="#" class="next">next</a>
-            </article>
-            <article class="low_box">
-                <h2>UX/UI DEVELOPMENT</h2>
-                <ul>
-                    <li>
-                        <h2>lorem</h2>
-                        <p>Lorem, ipsum</p>
-                    </li>
-                    <li>
-                        <h2>lorem</h2>
-                        <p>Lorem, ipsum</p>
-                    </li>
-                    <li>
-                        <h2>lorem</h2>
-                        <p>Lorem, ipsum</p>
-                    </li>
-                    <li>
-                        <h2>lorem</h2>
-                        <p>Lorem, ipsum</p>
-                    </li>
-                </ul>
-            </article>
-        </div>
-    </section>
     <figure id="visual">
 
         <section class="text_box">
@@ -418,6 +379,124 @@
         <a href="#" class="btnNext">next</a>
         
     </figure>
+
+    <section id="main">
+        <div class="inner">
+            <article class="text_info">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ab laborum odio rerum provident assumenda facere mollitia non voluptatibus corrupti excepturi enim esse minima nemo, iste magni harum vitae id</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, doloremque unde asperiores suscipit esse ipsum sequi accusantium ut, dolorum enim aperiam necessitatibus facilis aut nobis dolorem iste repudiandae consectetur excepturi?</p>
+            </article>
+
+            <article class="list_info">
+                <h1>Lorem, ipsum dolor.</h1>
+                <ul>
+                    <li><i class="fas fa-atlas"></i>Lorem, ipsum.</li>
+                    <li><i class="fab fa-battle-net"></i>Lorem, ipsum.</li>
+                    <li><i class="fas fa-bong"></i>Lorem, ipsum.</li>
+                </ul>
+            </article>
+
+            <article id="tab">
+                <ul>
+                    <li class="on"><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+                <div class="group">
+                    <div class="on">
+                        b1
+                    </div>
+                    <div>
+                        b2
+                    </div>
+                    <div>
+                        b3
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="panel">
+        <h2>
+            Lorem ipsum dolor sit amet
+            <br>
+            consectetur adipisicing elit. Temporibus, minus!
+        </h2>
+
+        <article class="panel_slide">
+            <ul class="list1">
+                <li>
+                    <div class="pic">
+                        <img src="img/panel1.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Kenya</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel2.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Kenya</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel3.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Bali</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel4.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Kenya</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li  class="on">
+                    <div class="pic">
+                        <img src="img/panel5.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>lceland</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel6.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Greece</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel7.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Arizona</h2>
+                    <a href="#">view more</a>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="img/panel8.jpg" alt="">
+                    </div>
+                    <p>Lorem</p>
+                    <h2>Kenya</h2>
+                    <a href="#">view more</a>
+                </li>
+            </ul>
+            <a href="#" class="btnPrev1">prev</a>
+            <a href="#" class="btnNext1">next</a>
+        </article>
+
+    </section>
 
     
     

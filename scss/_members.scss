@@ -50,7 +50,7 @@
                     transform: translateY(-50%);
                     padding:20px 20px; box-sizing: border-box;
                     strong{
-                        font: 30px/1 'arial';
+                        font: 20px/1 'arial';
                     }
                     p{
                     }
@@ -127,7 +127,7 @@
                 }
             }
             table{
-                border-top: 1px solid #333;
+                border-top: 1px solid #005FAC;
                 width: 100%; height: 200px;
                 margin-bottom: 50px;
                 input[type="text"].error,
@@ -140,9 +140,7 @@
                     display: block;
                     padding:20px; box-sizing: border-box;
                     width: 100%;
-                    &:nth-of-type(1){
-                        padding-top:40px ;
-                    }
+                    border-bottom: 1px solid #CDD6E1;
                         th{
                             padding:0 20px;
                             display: inline-block;
@@ -232,6 +230,7 @@
                     display: block;
                     padding:20px; box-sizing: border-box;
                     width: 100%;
+                    border: none;
                     th{
                         padding:0 20px;
                         display: inline-block;
@@ -261,13 +260,15 @@
             }
             .txtarea{
                     width: 100%;
-                    margin-bottom: 50px;
+                    margin-bottom: 80px;
                         h2{
                             text-align: center;
                             font:bold 30px/1 'Nto Sans KR'; color: #333;
                             margin-bottom: 50px;
                         }
                         #terms{
+                            border: 1px solid #CDD6E1;
+                            background: #F6F8FA;
                             width: 100%; height: 300px;
                             padding: 10px 40px; box-sizing: border-box;
                             font:14px/2 'Nto Sans KR'; color: #666;
