@@ -220,9 +220,6 @@ border: 1px solid #CDD6E1;
             font-size:30px; color: #222;
             display: none;
             .close{display: none;}
-            &:hover{
-                
-            }
             &.on{
                 .open{display: none;}
                 .close{display: block;}
