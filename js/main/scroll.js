@@ -1,9 +1,9 @@
 var pos0 = $("#header").offset().top; 
 var pos1 = $("#main").offset().top; 
 var pos2 = $("#global").offset().top; 
-var pos3 = $("#panel").offset().top; 
+var pos3 = $("#concept").offset().top; 
 var pos4 = $("#banner").offset().top; 
-var pos5 = $("#concept").offset().top; 
+var pos5 = $("#panel").offset().top; 
 
 
 

@@ -1007,8 +1007,8 @@ input, a, button {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   transform: translate(-50%, -50%);
   transition: 1s;
   opacity: 0; }
@@ -3475,7 +3475,7 @@ border: 1px solid #CDD6E1;
   box-sizing: border-box;
   border-top: 1px solid #CDD6E1; }
   #main .inner {
-    width: 90vw;
+    width: 1180px;
     margin: 0 auto;
     position: relative; }
     #main .inner::after {
@@ -3706,9 +3706,9 @@ border: 1px solid #CDD6E1;
   width: 100%;
   padding: 50px 0;
   box-sizing: border-box;
-  background: #f6f8fa; }
+  background: url(../img/global_bg.jpg) no-repeat center/cover; }
   #global .inner {
-    width: 90vw;
+    width: 1180px;
     margin: 0 auto; }
     #global .inner article {
       width: 100%; }
@@ -3719,8 +3719,7 @@ border: 1px solid #CDD6E1;
       #global .inner article > .text_info {
         float: left;
         width: 50%;
-        height: 500px;
-        padding: 40px 100px 40px 40px;
+        padding: 40px 100px 40px 0;
         box-sizing: border-box; }
         #global .inner article > .text_info h2 {
           font: bold 30px/1 'Noto Sans KR';
@@ -3751,7 +3750,7 @@ border: 1px solid #CDD6E1;
         width: 50%; }
         #global .inner article > .video video {
           width: 100%;
-          height: 500px; }
+          height: 100%; }
 
 #panel {
   width: 100%;
@@ -3928,11 +3927,11 @@ border: 1px solid #CDD6E1;
   padding: 100px 0 200px 0;
   box-sizing: border-box; }
   #concept .inner {
-    width: 90vw;
+    width: 1180px;
     margin: 0 auto; }
     #concept .inner .up {
       width: 100%;
-      margin-bottom: 50px; }
+      margin-bottom: 100px; }
       #concept .inner .up > h2 {
         font: bold 24px/1 'Noto Sans KR';
         color: #333;
@@ -4617,8 +4616,9 @@ border: 1px solid #CDD6E1;
       #global .inner article > .text_info {
         float: none;
         width: 100%;
-        height: 450px;
-        padding: 0 40px; }
+        height: auto;
+        padding: 0 40px;
+        margin-bottom: 10px; }
         #global .inner article > .text_info h2 {
           font: bold 18px/1 'Noto Sans KR';
           color: #333;
@@ -5125,7 +5125,7 @@ border: 1px solid #CDD6E1;
     text-align: center; }
 
   #global .inner article > .text_info {
-    height: 100%; }
+    height: auto; }
     #global .inner article > .text_info h2 {
       font: bold 14px/1 'Noto Sans KR';
       color: #333;

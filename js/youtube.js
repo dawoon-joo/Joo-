@@ -131,7 +131,7 @@
                     .append(
                         $("<img src='img/loading.gif'>")
                             .css({
-                                width: 80,
+                                width: 200,
                                 position: "absolute",
                                 top: '50%',
                                 left: '50%',
