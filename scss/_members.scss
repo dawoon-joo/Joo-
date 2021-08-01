@@ -27,7 +27,10 @@
                 background: #F6F8FA;
                 &.on{
                     background: #282b3a;
-                    color: #fff;
+                    .txt_members{
+                        strong{color: #fff;}
+                        p{color: #fff;}
+                    }
                 }
                 .img_members{
                     border: 1px solid #CDD6E1;
@@ -50,9 +53,12 @@
                     transform: translateY(-50%);
                     padding:20px 20px; box-sizing: border-box;
                     strong{
-                        font: 20px/1 'arial';
+                        display: block;
+                        font:bold 16px/1 'arial'; color: #005FAC;
+                        margin-bottom: 5px;
                     }
                     p{
+                        font:18px/1 'arial'; color: #333;
                     }
                 }
                 &::before{
@@ -101,7 +107,8 @@
                 display: inline-block;
                 width: 40%;
                 margin: 0 15px;
-                border: 1px solid #c9c9c9;
+                border: 1px solid #CDD6E1;
+                background-color: #F6F8FA;
                 padding: 30px 10px; box-sizing: border-box;
                 font:18px/1 'Nto Sans KR'; color: #333;
                 >strong{
@@ -109,7 +116,7 @@
                     margin-bottom: 20px;
                 }
                 p{
-                    line-height: 2;
+                    font:14px/2 'Nto Sans KR'; color: #666;
                 }
             }
         }
